@@ -1,7 +1,9 @@
 import Head from "next/head";
 import React from "react";
+import Header from "../components/common/Header";
 import Navbar from "../components/common/Navbar";
 import Container from "../components/layout/Container";
+
 
 function index() {
   return (
@@ -15,6 +17,7 @@ function index() {
 
       <Container>
         <Navbar />
+        <Header />
       </Container>
       
       <main></main>
