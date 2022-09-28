@@ -1,5 +1,6 @@
 import Head from "next/head";
 import React from "react";
+import Navbar from "../components/common/Navbar";
 
 function index() {
   return (
@@ -11,9 +12,9 @@ function index() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        The First Page!
-      </main>
+      <Navbar />
+      
+      <main></main>
     </>
   );
 }
