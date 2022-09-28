@@ -1,6 +1,7 @@
 import Head from "next/head";
 import React from "react";
 import Navbar from "../components/common/Navbar";
+import Container from "../components/layout/Container";
 
 function index() {
   return (
@@ -12,7 +13,9 @@ function index() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar />
+      <Container>
+        <Navbar />
+      </Container>
       
       <main></main>
     </>
