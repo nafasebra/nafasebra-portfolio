@@ -8,7 +8,7 @@ function Navbar() {
         <li className="mx-2">
           <a
             href="#"
-            className='text-light py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
+            className='text-light py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
           >
             صفحه اصلی
           </a>
@@ -16,7 +16,7 @@ function Navbar() {
         <li className="mx-2">
           <a
             href="#"
-            className='text-light py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
+            className='text-light py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
           >
             درباره من
           </a>
@@ -24,7 +24,7 @@ function Navbar() {
         <li className="mx-2">
           <a
             href="#"
-            className='text-light py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
+            className='text-light py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
           >
             پروژه ها
           </a>
@@ -32,7 +32,7 @@ function Navbar() {
         <li className="mx-2">
           <a
             href="#"
-            className='text-light py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
+            className='text-light py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
           >
             مهارت ها
           </a>
@@ -40,7 +40,7 @@ function Navbar() {
         <li className="mx-2">
           <a
             href="#"
-            className='text-light py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
+            className='text-light py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
           >
             بلاگ
           </a>
