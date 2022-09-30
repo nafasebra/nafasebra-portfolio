@@ -10,7 +10,7 @@ function Navbar() {
             href="#"
             className='text-light py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
           >
-            Intro
+            صفحه اصلی
           </a>
         </li>
         <li className="mx-2">
@@ -18,7 +18,7 @@ function Navbar() {
             href="#"
             className='text-light py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
           >
-            About me
+            درباره من
           </a>
         </li>
         <li className="mx-2">
@@ -26,7 +26,7 @@ function Navbar() {
             href="#"
             className='text-light py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
           >
-            Project
+            پروژه ها
           </a>
         </li>
         <li className="mx-2">
@@ -34,7 +34,7 @@ function Navbar() {
             href="#"
             className='text-light py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
           >
-            Skills
+            مهارت ها
           </a>
         </li>
         <li className="mx-2">
@@ -42,27 +42,11 @@ function Navbar() {
             href="#"
             className='text-light py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
           >
-            Post
+            بلاگ
           </a>
         </li>
       </ul>
       <div className="flex items-center">
-        <button className="p-2 mx-3 text-light">
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
-            />
-          </svg>
-        </button>
         <button className="p-2 text-light">
           <svg
             className="w-6 h-6"

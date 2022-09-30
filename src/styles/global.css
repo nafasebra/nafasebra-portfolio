@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,6 +6,21 @@
   body {
     @apply bg-dark-100
   }
+}
+
+@font-face {
+  font-family: 'vazir';
+  font-weight: 500;
+  src: url('../assets/fonts/Vazir-Regular-FD.ttf') format('truetype'),
+    url('../assets/fonts/Vazir-Regular-FD.woff') format('woff'),
+    url('../assets/fonts/Vazir-Regular-FD.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'vazir';
+  font-weight: 800;
+  src: url('../assets/fonts/Vazir-Bold-FD.ttf') format('truetype'),
+    url('../assets/fonts/Vazir-Bold-FD.woff') format('woff'),
+    url('../assets/fonts/Vazir-Bold-FD.woff2') format('woff2');
 }
 
 *,
@@ -19,7 +32,8 @@
 }
 
 :root {
-  font-family: 'poppins' , sans-serif;
+  font-family: 'vazir' , sans-serif;
+  direction: rtl;
   font-size: 16px;
   line-height: 24px;
   font-synthesis: none;
