@@ -6,7 +6,7 @@ type PropType = {
 
 function Container({children} : PropType) {
   return (
-    <div className='w-full xl:w-[1100px] px-2 mx-auto'>{children}</div>
+    <div className='w-[90%] xl:w-[1100px] px-2 mx-auto'>{children}</div>
   )
 }
 
