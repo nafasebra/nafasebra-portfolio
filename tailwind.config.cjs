@@ -13,6 +13,9 @@ module.exports = {
         },
         'orange': "#F5A302",
         'light': "#f5f5f5",
+      },
+      fontFamily: {
+        'poppins': ['poppins', 'sans-serif']
       }
     },
   },
