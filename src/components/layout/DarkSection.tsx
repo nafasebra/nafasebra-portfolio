@@ -7,7 +7,7 @@ type PropType = {
 
 function DarkSection({ children }: PropType) {
   return (
-    <section className="bg-dark-200 py-20">
+    <section className="bg-dark-200 py-20 my-10">
       <Container>{children}</Container>
     </section>
   );

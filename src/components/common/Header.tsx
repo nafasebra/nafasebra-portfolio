@@ -11,6 +11,7 @@ function Header() {
           و همچنین کسی که یادگیری, یاددادن و خلق چیز ها براش تفریحه و سعی میکنه کمکی باشه برای جامعه امروز. کارتیمی براش جذابه و دوست داره از بقیه چه کوچیکتر یا چه بزرگتر تجربه کسب کنه...
         </p>
         <ul className='flex items-center pt-7'>
+          {/* the linkedin link */}
           <li className='ml-5'>
             <a href="https://www.linkedin.com/in/nafas-ebrahimi-325653189/" className='block text-light p-1 hover:text-orange cursor-pointer'>
               <svg xmlns="http://www.w3.org/2000/svg" className='w-7 h-7 transition-none' viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -23,6 +24,7 @@ function Header() {
               </svg>
             </a>
           </li>
+          {/* the github link */}
           <li className='ml-5'>
             <a href="https://github.com/nafasebra" className='block text-light p-1 hover:text-orange cursor-pointer'>
               <svg xmlns="http://www.w3.org/2000/svg" className='w-7 h-7 transition-none' viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -31,6 +33,7 @@ function Header() {
               </svg>
             </a>
           </li>
+          {/* the youtube link */}
           {/* <li className='ml-5'>
             <a href="#" className='block text-light p-1 hover:text-orange cursor-pointer'>
               <svg xmlns="http://www.w3.org/2000/svg" className='w-7 h-7 transition-none' viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -40,6 +43,7 @@ function Header() {
               </svg>
             </a>
           </li> */}
+          {/* the gmail address link */}
           <li className=''>
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ebranafas@gmail.com&su=SUBJECT&body=BODY" className='block text-light p-1 hover:text-orange cursor-pointer' target="_blank">
               <svg xmlns="http://www.w3.org/2000/svg" className='w-7 h-7 transition-none' viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -53,7 +57,9 @@ function Header() {
           </li>
         </ul>
       </div>
-      <div className='w-[90%] lg:w-[48%]'></div>
+      <div className='w-[90%] lg:w-[48%]'>
+        {/* image content */}
+      </div>
     </header>
   )
 }
