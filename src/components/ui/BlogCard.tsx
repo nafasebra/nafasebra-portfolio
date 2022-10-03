@@ -20,7 +20,7 @@ function BlogCard(props: PropType) {
       {/* <p className="pt-2 text-gray-200 leading-6 text-[0.9rem]">
         درود به همگی امیدوارم حالتون خوب باشه... امروز قراره که دراین مورد صحبت کنیم که ممکنه برای خیلی ها سوال باشه اینکه فرق بین برنامه نویسی و کدنویسی چیه؟ و توی کدوم قسمتم؟
       </p> */}
-      <p className="pt-2 text-gray-200 leading-6 text-[0.9rem]" dangerouslySetInnerHTML={{__html: description}} ></p>
+      <p className="pt-2 text-gray-200 leading-6 text-[0.9rem]" dangerouslySetInnerHTML={{__html: description}}></p>
     </div>
   );
 }

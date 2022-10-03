@@ -1,0 +1,1 @@
+export const removeHtmlTag = (str: string) => str.replace(/<\/?[^>]+(>|$)/g, '');
