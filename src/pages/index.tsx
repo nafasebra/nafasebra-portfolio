@@ -10,10 +10,14 @@ import DarkSection from "../components/layout/DarkSection";
 import SteecoScreenshot from "../assets/images/steeco-screenshot.png";
 import asrezScreenshot from "../assets/images/asrez-screenshot.png";
 import BlogCard from "../components/ui/BlogCard";
+import ProjectCard from "../components/ui/ProjectCard";
 
 
 
 function index() {
+  // TODO: Create a fake data file and fetch it for blogs
+
+
   return (
     <>
       <Head>
@@ -123,30 +127,8 @@ function index() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            <div className="flex flex-col">
-              <div className="relative block w-full h-[170px] rounded-lg overflow-hidden group">
-                <div className="z-10 absolute inset-0 flex items-center justify-center bg-orange text-white opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0">
-                  <a href="https://www.asrez.com" className="flex items-center py-3 px-4 rounded-lg border-2 border-white bg-transparent hover:bg-white hover:text-orange">
-                    <svg className="w-6 h-6 transition-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
-                    <span className="mr-5">مشاهده سایت</span>
-                  </a>
-                </div>
-                <Image src={asrezScreenshot} className="w-full h-full object-cover" alt="اسکرین شات وبسایت اسرز" />
-              </div>
-              <p className="text-gray-300 text-center py-3 text-sm">وبسایت شرکت اسرز</p>
-            </div>
-            <div className="flex flex-col">
-              <div className="relative block w-full h-[170px] rounded-lg overflow-hidden group">
-                <div className="z-10 absolute inset-0 flex items-center justify-center bg-orange text-white opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0">
-                  <a href="https://www.steeco.ir" className="flex items-center py-3 px-4 rounded-lg border-2 border-white bg-transparent hover:bg-white hover:text-orange">
-                    <svg className="w-6 h-6 transition-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
-                    <span className="mr-5">مشاهده سایت</span>
-                  </a>
-                </div>
-                <Image src={SteecoScreenshot} className="w-full h-full object-cover" alt="اسکرین شات وبسایت استیل صنعت کاشان" />
-              </div>
-              <p className="text-gray-300 text-center py-3 text-sm">وبسایت شرکت استیل صنعت کاشان</p>
-            </div>
+            <ProjectCard imageUrl={asrezScreenshot} name="وبسایت شرکت اسرز"  target="https://asrez.com"/>
+            <ProjectCard imageUrl={SteecoScreenshot} name="وبسایت شرکت استیل صنعت کاشان"  target="https://steeco.ir"/>
           </div>
         </DarkSection>
 
