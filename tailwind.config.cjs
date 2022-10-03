@@ -12,7 +12,7 @@ module.exports = {
           200: '#171A21',
         },
         'orange': "#F5A302",
-        'light': "#f5f5f5",
+        'light': "#f0f0f0",
       },
       fontFamily: {
         'poppins': ['poppins', 'sans-serif']
