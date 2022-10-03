@@ -15,9 +15,6 @@ import ProjectCard from "../components/ui/ProjectCard";
 
 
 function index() {
-  // TODO: Create a fake data file and fetch it for blogs
-
-
   return (
     <>
       <Head>
