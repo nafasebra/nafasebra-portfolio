@@ -11,6 +11,7 @@ import SteecoScreenshot from "../assets/images/steeco-screenshot.png";
 import asrezScreenshot from "../assets/images/asrez-screenshot.png";
 import BlogCard from "../components/ui/BlogCard";
 import ProjectCard from "../components/ui/ProjectCard";
+import { Posts } from "../data/post";
 
 
 
@@ -140,10 +141,11 @@ function index() {
                 </p>
               </div>
               <div className="w-full md:w-[70%]">
-                <BlogCard />
-                <BlogCard />
-                <BlogCard />
-                <BlogCard />
+                {
+                  Posts.map((item) => (
+                    <BlogCard key={item.id} date={item.date} title={item.title} description={item.body} />
+                  ))
+                }
               </div>
             </div>
           </Container>
