@@ -148,6 +148,20 @@ function index() {
             </div>
           </div>
         </DarkSection>
+
+        <section>
+          <Container>
+            <div className="block pb-14">
+              <h3 className="text-light font-bold text-3xl">
+                مقاله های منتشر شده...
+              </h3>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+              <div className=""></div>
+            </div>
+          </Container>
+        </section>
       </main>
     </>
   );
