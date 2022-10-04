@@ -7,6 +7,7 @@ import Header from "../components/common/Header";
 import Navbar from "../components/common/Navbar";
 import BlogCard from "../components/ui/BlogCard";
 import ProjectCard from "../components/ui/ProjectCard";
+import Form from "../components/common/Form";
 import Footer from "../components/common/Footer";
 
 import SteecoScreenshot from "../assets/images/steeco-screenshot.png";
@@ -185,11 +186,7 @@ function index() {
               </p>
             </div>
             <div className="w-full md:w-[70%]">
-              <form action="" className="w-full flex flex-col">
-                <input type="text" className="block mt-3 mb-5" />
-                <input type="text" className="block mt-3 mb-5" />
-                <input type="text" className="block mt-3 mb-5" />
-              </form>
+              <Form />
             </div>
           </div>
         </DarkSection>
