@@ -9,7 +9,7 @@ function Footer() {
     <footer>
       <DarkSection>
         <div className="flex flex-col items-center">
-          <h2 className="text-gray-300 pb-10 font-bold">با من درارتباط باش...</h2>
+          <h2 className="text-gray-300 pb-10 font-bold">با من در شبکه های اجتماعی درارتباط باش...</h2>
           <Image src={arrowDashed} className="py-5 w-10" alt="" />
           <SocialSection />
         </div>

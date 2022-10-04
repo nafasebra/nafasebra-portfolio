@@ -179,7 +179,7 @@ function index() {
           <div className="flex flex-col md:flex-row justify-between">
             <div className="w-full md:w-[30%]">
               <h2 className="font-medium text-orange text-5xl leading-[4.5rem] ">
-                ارتباط با <br /> من
+                ارسال ایمیل <br /> به من
               </h2>
               <p className="text-gray-300 pt-10">
                 اگر سوال یا موردی هست که دوست دارید باهام درمیون بذارید. به شبکه های اجتماعی یا فرم کناری بهم پیام بدید. میخونمشون :)
