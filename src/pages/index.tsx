@@ -1,19 +1,17 @@
 import Head from "next/head";
-import Image from "next/image";
 import React from "react";
 
-import Header from "../components/common/Header";
-import Navbar from "../components/common/Navbar";
 import Container from "../components/layout/Container";
 import DarkSection from "../components/layout/DarkSection";
+import Header from "../components/common/Header";
+import Navbar from "../components/common/Navbar";
+import BlogCard from "../components/ui/BlogCard";
+import ProjectCard from "../components/ui/ProjectCard";
+import Footer from "../components/common/Footer";
 
 import SteecoScreenshot from "../assets/images/steeco-screenshot.png";
 import asrezScreenshot from "../assets/images/asrez-screenshot.png";
-import BlogCard from "../components/ui/BlogCard";
-import ProjectCard from "../components/ui/ProjectCard";
 import { Posts } from "../data/post";
-
-
 
 function index() {
   return (
@@ -49,9 +47,9 @@ function index() {
           <div className="flex flex-col-reverse md:flex-row items-center justify-between">
             <div className="w-full md:w-[45%]">
               <p className="text-gray-400 leading-7">
-                حدودا دو سه سالی هست برنامه نویسی فرانت اند کار میکنم. علاقه مند به خلق کردن, یاددادن و
-                یادگیری. علاقه مند به کارهای تیمی و اینچیزا :) برای همینه که شغل
-                برنامه نویسی رو انتخاب کردم <br />
+                حدودا دو سه سالی هست برنامه نویسی فرانت اند کار میکنم. علاقه مند
+                به خلق کردن, یاددادن و یادگیری. علاقه مند به کارهای تیمی و
+                اینچیزا :) برای همینه که شغل برنامه نویسی رو انتخاب کردم <br />
                 رسالتم اینه که برای جامعه اونطوری که از دستم برمیاد کاری انجام
                 بدم و دنیا رو یک جای راحتی برای انسان های دوست داشتنی تبدیل کنم
               </p>
@@ -124,8 +122,16 @@ function index() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            <ProjectCard imageUrl={asrezScreenshot} name="وبسایت شرکت اسرز"  target="https://asrez.com"/>
-            <ProjectCard imageUrl={SteecoScreenshot} name="وبسایت شرکت استیل صنعت کاشان"  target="https://steeco.ir"/>
+            <ProjectCard
+              imageUrl={asrezScreenshot}
+              name="وبسایت شرکت اسرز"
+              target="https://asrez.com"
+            />
+            <ProjectCard
+              imageUrl={SteecoScreenshot}
+              name="وبسایت شرکت استیل صنعت کاشان"
+              target="https://steeco.ir"
+            />
           </div>
         </DarkSection>
 
@@ -133,23 +139,63 @@ function index() {
           <Container>
             <div className="flex flex-col md:flex-row justify-between">
               <div className="w-full md:w-[28%]">
-                <h2 className="font-medium text-orange text-5xl leading-[4.5rem] ">مقاله های تازه <br /> منتشر شده...</h2>
+                <h2 className="font-medium text-orange text-5xl leading-[4.5rem] ">
+                  مقاله های تازه <br /> منتشر شده...
+                </h2>
                 <p className="text-light hover:text-orange flex items-center py-3 cursor-pointer transition-all">
                   <span className="ml-3">بیشتر ببین</span>
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16l-4-4m0 0l4-4m-4 4h18" /></svg>
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M7 16l-4-4m0 0l4-4m-4 4h18"
+                    />
+                  </svg>
                 </p>
               </div>
               <div className="w-full md:w-[70%]">
-                {
-                  Posts.map((item) => (
-                    <BlogCard key={item.id} date={item.date} title={item.title} description={item.body} />
-                  ))
-                }
+                {Posts.map((item) => (
+                  <BlogCard
+                    key={item.id}
+                    date={item.date}
+                    title={item.title}
+                    description={item.body}
+                  />
+                ))}
               </div>
             </div>
           </Container>
         </section>
+
+        <DarkSection>
+          <div className="flex flex-col md:flex-row justify-between">
+            <div className="w-full md:w-[28%]">
+              <h2 className="font-medium text-orange text-5xl leading-[4.5rem] ">
+                ارتباط با <br /> من
+              </h2>
+              <p className="text-gray-300 pt-10">
+                اگر سوال یا موردی هست که دوست دارید باهام درمیون بذارید. به شبکه های اجتماعی یا فرم کناری بهم پیام بدید. میخونمشون :)
+              </p>
+            </div>
+            <div className="w-full md:w-[70%]">
+              <form action="" className="w-full flex flex-col">
+                <input type="text" className="block mt-3 mb-5" />
+                <input type="text" className="block mt-3 mb-5" />
+                <input type="text" className="block mt-3 mb-5" />
+              </form>
+            </div>
+          </div>
+        </DarkSection>
       </main>
+
+      <Footer />
     </>
   );
 }
