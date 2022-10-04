@@ -177,7 +177,7 @@ function index() {
 
         <DarkSection>
           <div className="flex flex-col md:flex-row justify-between">
-            <div className="w-full md:w-[28%]">
+            <div className="w-full md:w-[30%]">
               <h2 className="font-medium text-orange text-5xl leading-[4.5rem] ">
                 ارتباط با <br /> من
               </h2>
@@ -185,7 +185,7 @@ function index() {
                 اگر سوال یا موردی هست که دوست دارید باهام درمیون بذارید. به شبکه های اجتماعی یا فرم کناری بهم پیام بدید. میخونمشون :)
               </p>
             </div>
-            <div className="w-full md:w-[70%]">
+            <div className="w-full md:w-[60%]">
               <Form />
             </div>
           </div>
