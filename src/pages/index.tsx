@@ -27,7 +27,6 @@ function index() {
           name="description"
           content="سلام به همگی. بنده نفس ابراهیمی هستم و درحوزه برنامه نویسی فرانت اند کار میکنم. خوشحال میشم یک سری به سایتم بزنی. راستی خیلی اتفاقا قراره اینجا بیوفته :)"
         />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Container>
