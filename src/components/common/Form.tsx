@@ -1,4 +1,4 @@
-import {useRef} from "react";
+import {useRef, FormEvent} from "react";
 
 function Form() {
   const nameRef = useRef<HTMLInputElement>(null);
@@ -6,8 +6,14 @@ function Form() {
   const SubjectRef = useRef<HTMLInputElement>(null);
   const MessageRef = useRef<HTMLTextAreaElement>(null);
 
+  const HandleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    console.log('send message!')
+  }
+
+
   return (
-    <form action="" className="w-full flex flex-col text-light">
+    <form onSubmit={HandleSubmit} action="" className="w-full flex flex-col text-light">
       <div className="mb-5">
         <label htmlFor="" className="block w-full text-sm text-gray-400">نام شما</label>
         <input ref={nameRef} type="text" className="block w-full mt-3 mb-5 py-4 px-6 text-lg text-gray-300 outline-none border-b-2 border-transparent focus:border-gray-400 bg-dark-100" placeholder="اسمتون رو اینجا تایپ کنید" />
