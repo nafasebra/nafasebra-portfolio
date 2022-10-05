@@ -12,9 +12,14 @@ import Footer from "../components/common/Footer";
 
 import SteecoScreenshot from "../assets/images/steeco-screenshot.png";
 import asrezScreenshot from "../assets/images/asrez-screenshot.png";
-import { Posts } from "../data/post";
+import { Posts, PostType } from "../data/post";
 
-function index() {
+type PropType = {
+  posts: PostType[]
+}
+
+
+function index(props: PropType) {
   return (
     <>
       <Head>
@@ -161,7 +166,7 @@ function index() {
                 </p>
               </div>
               <div className="w-full md:w-[70%]">
-                {Posts.map((item) => (
+                {props.posts.map((item) => (
                   <BlogCard
                     key={item.id}
                     date={item.date}
@@ -195,5 +200,13 @@ function index() {
     </>
   );
 }
+
+export const getStaticProps = async () => {
+  return {
+    props: {
+      posts: Posts
+    },
+  };
+};
 
 export default index;

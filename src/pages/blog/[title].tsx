@@ -76,7 +76,7 @@ function Blog(props: PropType) {
 }
 
 export const getServerSideProps: GetStaticProps = async (context) => {
-  const {title} = context.params as IContextStaticProps;
+  const { title } = context.params as IContextStaticProps;
   const selectedBlog = Posts.filter(
     (item) => item.title === decodeURIComponent(title)
   );
