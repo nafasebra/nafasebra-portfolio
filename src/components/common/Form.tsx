@@ -1,4 +1,6 @@
 import {useRef, FormEvent, useState} from "react";
+import { isEmptyStringArray } from "../../helper";
+
 
 type ErrorListInputsType = {
   name: string;
@@ -20,14 +22,33 @@ function Form() {
 
   const HandleSubmit = (e: FormEvent) => {
     e.preventDefault();
+
     if(nameRef.current?.value !== '') 
       setErrors({...errors, name: 'فیلد اسم نباید خالی باشه'})
-      
     if(SubjectRef.current?.value !== '') 
-      setErrors({...errors, name: 'فیلد موضوع پیام نباید خالی باشه'})
-    
+      setErrors({...errors, subject: 'فیلد موضوع پیام نباید خالی باشه'})
     if(MessageRef.current?.value !== '') 
-      setErrors({...errors, name: 'فیلد پیام نباید خالی باشه'})
+      setErrors({...errors, message: 'فیلد پیام نباید خالی باشه'})
+
+    if(isEmptyStringArray(Object.values(errors))) {
+      // console.log('message was sended successfuly');
+      let data = {
+        name: nameRef.current?.value,
+        email: emailRef.current?.value,
+        subject: SubjectRef.current?.value,
+        message: MessageRef.current?.value 
+      }
+      fetch('/api/contactus', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json, text/plain, */*',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      }).then((res) => {
+        if(res.status === 200) console.log('response resived successfuly')
+      })
+    }
   }
 
 
