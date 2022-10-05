@@ -13,7 +13,7 @@ function _document() {
   return (
     <Html lang="IR-fa" dir="rtl">
       <Head>
-        <link rel="shortcut icon" href="./public/favicon.png" />
+        <link rel="shortcut icon" href="/public/favicon.png" />
       </Head>
       <body>
         <Main />
