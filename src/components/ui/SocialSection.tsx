@@ -16,7 +16,7 @@ function SocialSection() {
             strokeWidth="1.5"
             stroke="currentColor"
             fill="none"
-            stroke-linecap="round"
+            strokeLinecap="round"
             stroke-linejoin="round"
           >
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -41,7 +41,7 @@ function SocialSection() {
             strokeWidth="1.5"
             stroke="currentColor"
             fill="none"
-            stroke-linecap="round"
+            strokeLinecap="round"
             stroke-linejoin="round"
           >
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -52,7 +52,7 @@ function SocialSection() {
       {/* the youtube link */}
       {/* <li className='ml-5'>
             <a href="#" className='block text-light p-1 hover:text-orange cursor-pointer'>
-              <svg xmlns="http://www.w3.org/2000/svg" className='w-7 h-7 transition-none' viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <svg xmlns="http://www.w3.org/2000/svg" className='w-7 h-7 transition-none' viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                 <rect x="3" y="5" width="18" height="14" rx="4" />
                 <path d="M10 9l5 3l-5 3z" />
@@ -73,7 +73,7 @@ function SocialSection() {
             strokeWidth="1.5"
             stroke="currentColor"
             fill="none"
-            stroke-linecap="round"
+            strokeLinecap="round"
             stroke-linejoin="round"
           >
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
