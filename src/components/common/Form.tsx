@@ -1,4 +1,10 @@
-import {useRef, FormEvent} from "react";
+import {useRef, FormEvent, useState} from "react";
+
+type ErrorListInputsType = {
+  name: string;
+  subject: string;
+  message: string;
+}
 
 function Form() {
   const nameRef = useRef<HTMLInputElement>(null);
@@ -6,9 +12,22 @@ function Form() {
   const SubjectRef = useRef<HTMLInputElement>(null);
   const MessageRef = useRef<HTMLTextAreaElement>(null);
 
+  const [errors, setErrors] = useState<ErrorListInputsType>({
+    name: '',
+    subject: '',
+    message: ''
+  })
+
   const HandleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    console.log('send message!')
+    if(nameRef.current?.value !== '') 
+      setErrors({...errors, name: 'فیلد اسم نباید خالی باشه'})
+      
+    if(SubjectRef.current?.value !== '') 
+      setErrors({...errors, name: 'فیلد موضوع پیام نباید خالی باشه'})
+    
+    if(MessageRef.current?.value !== '') 
+      setErrors({...errors, name: 'فیلد پیام نباید خالی باشه'})
   }
 
 
