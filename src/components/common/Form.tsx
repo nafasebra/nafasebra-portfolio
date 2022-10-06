@@ -38,26 +38,10 @@ const Form = () => {
         .string()
         .required("فیلد ایمیل نباید خالی باشه!")
         .email("فرمت ایمیل اشتباهه!!!"),
+      subject: yup.string().required("فیلد موضوع پیامتون نباید خالی باشه!"),
+      message: yup.string().required("فیلد پیام نباید خالی باشه!"),
     }),
   });
-
-  const HandleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-
-    // if (nameRef.current?.value === "")
-    //   setErrors({ ...errors, name: "فیلد اسم نباید خالی باشه" });
-    // else if (SubjectRef.current?.value === "")
-    //   setErrors({ ...errors, subject: "فیلد موضوع پیام نباید خالی باشه" });
-    // else if (MessageRef.current?.value === "")
-    //   setErrors({ ...errors, message: "فیلد پیام نباید خالی باشه" });
-    // else {
-    //   setErrors({
-    //     name: "",
-    //     subject: "",
-    //     message: "",
-    //   });
-    // }
-  };
 
   return (
     <form
