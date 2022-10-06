@@ -1,12 +1,6 @@
-import { useRef, FormEvent, useState } from "react";
-import { isEmptyStringArray } from "../../helper";
-import {
-  Formik,
-  FormikHelpers,
-  FormikProps,
-  Field,
-  FieldProps,
-} from "formik";
+import { FormEvent } from "react";
+import * as yup from "yup";
+import { useFormik } from "formik";
 
 type FormInputListType = {
   name: string;
@@ -16,17 +10,36 @@ type FormInputListType = {
 };
 
 const Form = () => {
-  const nameRef = useRef<HTMLInputElement>(null);
-  const emailRef = useRef<HTMLInputElement>(null);
-  const SubjectRef = useRef<HTMLInputElement>(null);
-  const MessageRef = useRef<HTMLTextAreaElement>(null);
-
   const initalValueForm: FormInputListType = {
     name: "",
     email: "",
     subject: "",
     message: "",
   };
+
+  const formik = useFormik({
+    initialValues: initalValueForm,
+    onSubmit: (values) => {
+      console.log(values);
+      // fetch("/api/contactus", {
+      //   method: "POST",
+      //   headers: {
+      //     Accept: "application/json, text/plain, */*",
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify(data),
+      // }).then((res) => {
+      //   if (res.status === 200) console.log("response resived successfuly");
+      // });
+    },
+    validationSchema: yup.object({
+      name: yup.string().required("فیلد نام نباید خالی باشه!"),
+      email: yup
+        .string()
+        .required("فیلد ایمیل نباید خالی باشه!")
+        .email("فرمت ایمیل اشتباهه!!!"),
+    }),
+  });
 
   const HandleSubmit = (e: FormEvent) => {
     e.preventDefault();
@@ -44,141 +57,87 @@ const Form = () => {
     //     message: "",
     //   });
     // }
-
-    let data = {
-      name: nameRef.current?.value,
-      email: emailRef.current?.value,
-      subject: SubjectRef.current?.value,
-      message: MessageRef.current?.value,
-    };
-    fetch("/api/contactus", {
-      method: "POST",
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    }).then((res) => {
-      if (res.status === 200) console.log("response resived successfuly");
-    });
   };
 
   return (
-    <Formik
-      initialValues={initalValueForm}
-      validate={(values) => {
-        const errors: FormInputListType = {
-          name: "",
-          email: "",
-          subject: "",
-          message: "",
-        };
-        if(values.name === '') {
-          errors.name = "فیلد اسم نباید خالی باشه"
-        }
-        if(values.email === '') {
-          errors.email = "فیلد ایمیل نباید خالی باشه"
-        } else if (
-          !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-        ) {
-          errors.email = 'فرمت آدرس ایمیل شما اشتباهه';
-        }
-        if(values.subject === '') {
-          errors.subject = "فیلد موضوع پیام نباید خالی باشه"
-        }
-        if(values.message === '') {
-          errors.message = "فیلد پیام نباید خالی باشه"
-        }
-        return errors;
-      }}
-      onSubmit={(values, { setSubmitting }) => {
-        setSubmitting(false);
-        setTimeout(() => {
-          console.log(JSON.stringify(values, null, 4));
-        }, 400);
-      }}
+    <form
+      onSubmit={formik.handleSubmit}
+      action="POST"
+      className="w-full flex flex-col text-light"
     >
-      {({
-        values,
-        errors,
-        touched,
-        handleChange,
-        handleBlur,
-        handleSubmit,
-        isSubmitting,
-      }) => (
-        <form
-        onSubmit={handleSubmit}
-        action="POST"
-        className="w-full flex flex-col text-light"
-      >
-        <div className="mb-5">
-          <label htmlFor="name" className="block w-full text-sm text-gray-400">
-            نام شما
-          </label>
-          <input
-            ref={nameRef}
-            type="text"
-            name="name"
-            id="name"
-            className="block w-full mt-3 mb-5 py-4 px-6 text-lg text-gray-300 outline-none border-b-2 border-transparent focus:border-gray-400 bg-dark-100"
-            placeholder="اسمتون رو اینجا تایپ کنید"
-          />
-          <p className="text-red-400 py-2 text-sm">{errors.name}</p>
-        </div>
-        <div className="mb-5">
-          <label htmlFor="email" className="block w-full text-sm text-gray-400">
-            ایمیل
-          </label>
-          <input
-            ref={emailRef}
-            type="text"
-            name="email"
-            id="email"
-            required
-            className="block w-full mt-3 mb-5 py-4 px-6 text-lg text-gray-300 outline-none border-b-2 border-transparent focus:border-gray-400 bg-dark-100"
-            placeholder="مثلا example@gmail.com"
-          />
-          <p className="text-red-400 py-2 text-sm">{errors.email}</p>
-        </div>
-        <div className="mb-5">
-          <label htmlFor="subject" className="block w-full text-sm text-gray-400">
-            موضوع پیام
-          </label>
-          <input
-            ref={SubjectRef}
-            type="text"
-            name="subject"
-            id="subject"
-            className="block w-full mt-3 mb-5 py-4 px-6 text-lg text-gray-300 outline-none border-b-2 border-transparent focus:border-gray-400 bg-dark-100"
-            placeholder="مثلا موضوع کاری یا سوال یا..."
-          />
-          <p className="text-red-400 py-2 text-sm">{errors.subject}</p>
-        </div>
-        <div className="mb-5">
-          <label htmlFor="message" className="block w-full text-sm text-gray-400">
-            پیام شما
-          </label>
-          <textarea
-            ref={MessageRef}
-            name="message"
-            id="message"
-            className="block w-full h-[200px] mt-3 mb-5 py-4 px-6 text-lg text-gray-300 outline-none border-b-2 border-transparent focus:border-gray-400 bg-dark-100 resize-none"
-            placeholder="پیام یا موردی که مدنظرتون هست رو بنویسید"
-          ></textarea>
-          <p className="text-red-400 py-2 text-sm">{errors.message}</p>
-        </div>
-        <div className="block">
-          <button
-            type="submit"
-            className="w-full text-center bg-orange text-light rounded-lg py-4 px-3 hover:opacity-50"
-          >
-            پیام رو ارسال کنید
-          </button>
-        </div>
-      </form>
-      )}
-    </Formik>
+      <div className="mb-5">
+        <label htmlFor="name" className="block w-full text-sm text-gray-400">
+          نام شما
+        </label>
+        <input
+          value={formik.values.name}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          type="text"
+          name="name"
+          id="name"
+          className="block w-full mt-3 mb-5 py-4 px-6 text-lg text-gray-300 outline-none border-b-2 border-transparent focus:border-gray-400 bg-dark-100"
+          placeholder="اسمتون رو اینجا تایپ کنید"
+        />
+        <p className="text-red-400 py-2 text-sm">{formik.errors.name}</p>
+      </div>
+      <div className="mb-5">
+        <label htmlFor="email" className="block w-full text-sm text-gray-400">
+          ایمیل
+        </label>
+        <input
+          value={formik.values.email}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          type="text"
+          name="email"
+          id="email"
+          required
+          className="block w-full mt-3 mb-5 py-4 px-6 text-lg text-gray-300 outline-none border-b-2 border-transparent focus:border-gray-400 bg-dark-100"
+          placeholder="مثلا example@gmail.com"
+        />
+        <p className="text-red-400 py-2 text-sm">{formik.errors.email}</p>
+      </div>
+      <div className="mb-5">
+        <label htmlFor="subject" className="block w-full text-sm text-gray-400">
+          موضوع پیام
+        </label>
+        <input
+          value={formik.values.subject}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          type="text"
+          name="subject"
+          id="subject"
+          className="block w-full mt-3 mb-5 py-4 px-6 text-lg text-gray-300 outline-none border-b-2 border-transparent focus:border-gray-400 bg-dark-100"
+          placeholder="مثلا موضوع کاری یا سوال یا..."
+        />
+        <p className="text-red-400 py-2 text-sm">{formik.errors.subject}</p>
+      </div>
+      <div className="mb-5">
+        <label htmlFor="message" className="block w-full text-sm text-gray-400">
+          پیام شما
+        </label>
+        <textarea
+          value={formik.values.message}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          name="message"
+          id="message"
+          className="block w-full h-[200px] mt-3 mb-5 py-4 px-6 text-lg text-gray-300 outline-none border-b-2 border-transparent focus:border-gray-400 bg-dark-100 resize-none"
+          placeholder="پیام یا موردی که مدنظرتون هست رو بنویسید"
+        ></textarea>
+        <p className="text-red-400 py-2 text-sm">{formik.errors.message}</p>
+      </div>
+      <div className="block">
+        <button
+          type="submit"
+          className="w-full text-center bg-orange text-light rounded-lg py-4 px-3 hover:opacity-50"
+        >
+          ارسال پیام
+        </button>
+      </div>
+    </form>
   );
 };
 
