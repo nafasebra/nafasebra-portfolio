@@ -81,7 +81,7 @@ const Form = () => {
         } else if (
           !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
         ) {
-          errors.email = 'آدرس ایمیل اشتباهه';
+          errors.email = 'فرمت آدرس ایمیل شما اشتباهه';
         }
         if(values.subject === '') {
           errors.subject = "فیلد موضوع پیام نباید خالی باشه"
@@ -92,9 +92,9 @@ const Form = () => {
         return errors;
       }}
       onSubmit={(values, { setSubmitting }) => {
+        setSubmitting(false);
         setTimeout(() => {
           console.log(JSON.stringify(values, null, 4));
-          setSubmitting(false);
         }, 400);
       }}
     >
