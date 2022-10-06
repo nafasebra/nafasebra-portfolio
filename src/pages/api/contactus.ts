@@ -1,4 +1,3 @@
-require('dotenv').config()
 export default async function (req: any, res: any) {
   const {name, email, subject, message} = req.body;
   const nodemailer = require("nodemailer");
