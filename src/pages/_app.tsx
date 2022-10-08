@@ -1,15 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AppProps } from "next/app";
 import "../styles/global.css";
 import SplashScreen from "../components/common/SplashScreen";
 
 function App({ Component, pageProps }: AppProps) {
-  return (
-    <>
-      <SplashScreen />
-      <Component {...pageProps} />
-    </>
-  );
+  useEffect(() => {
+    if(typeof window !== undefined) {
+      const loading = document.getElementById('splashScreen');
+      if(loading) {
+        loading.style.opacity = "0";
+        loading.style.visibility = "hidden";
+        loading.style.zIndex = "-100";
+      }
+    }
+  }, []);
+
+
+  return <Component {...pageProps} />;
 }
 
 export default App;

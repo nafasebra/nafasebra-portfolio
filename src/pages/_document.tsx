@@ -8,6 +8,7 @@ import {
   DocumentInitialProps,
 } from "next/document";
 import Document from 'next/document'
+import SplashScreen from "../components/common/SplashScreen";
 
 function _document() {
   return (
@@ -16,6 +17,7 @@ function _document() {
         <link rel="shortcut icon" href="/favicon.png" />
       </Head>
       <body>
+        <SplashScreen />
         <Main />
         <NextScript />
       </body>
