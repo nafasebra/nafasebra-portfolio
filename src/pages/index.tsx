@@ -34,14 +34,15 @@ function index(props: PropType) {
         />
       </Head>
 
+      <Navbar />
+
       <Container>
-        <Navbar />
         <Header />
       </Container>
 
       <main>
         {/* about me section */}
-        <DarkSection>
+        <DarkSection id="about">
           <div className="block pb-14">
             <p className="text-light pb-4">
               درباره <span className="text-orange">من</span>
@@ -64,7 +65,7 @@ function index(props: PropType) {
         </DarkSection>
 
         {/* skills section */}
-        <section className="py-24">
+        <section className="py-24" id="skills">
           <Container>
             <div className="block pb-14">
               <p className="text-light pb-4">
@@ -116,7 +117,7 @@ function index(props: PropType) {
           </Container>
         </section>
 
-        <DarkSection>
+        <DarkSection id="projects">
           <div className="block pb-14">
             <p className="text-light pb-4">
               پروژه های <span className="text-orange">من</span>
@@ -140,7 +141,7 @@ function index(props: PropType) {
           </div>
         </DarkSection>
 
-        <section className="py-36">
+        <section className="py-36" id="blog">
           <Container>
             <div className="flex flex-col md:flex-row justify-between">
               <div className="w-full md:w-[28%]">
@@ -179,7 +180,7 @@ function index(props: PropType) {
           </Container>
         </section>
 
-        <DarkSection>
+        <DarkSection id="contact">
           <div className="flex flex-col md:flex-row justify-between">
             <div className="w-full md:w-[30%]">
               <h2 className="font-medium text-orange text-5xl leading-[4.5rem] ">

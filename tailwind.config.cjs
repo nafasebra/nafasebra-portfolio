@@ -23,11 +23,16 @@ module.exports = {
       },
       animation: {
         'loading': 'loadCircle 1s ease-in infinite',
+        'sticky': 'stickyNav .5s ease-out forwards',
       },
       keyframes: {
         loadCircle: {
           'from': {boxShadow: '-72px 0 #f5a302 inset'},
           'to': {boxShadow: '45px 0 #f5a302 inset'},
+        },
+        stickyNav: {
+          'from': {transform: 'translateY(-100px)'},
+          'to': {transform: 'translateY(0)'},
         }
       }
     },
