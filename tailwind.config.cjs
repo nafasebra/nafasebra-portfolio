@@ -22,12 +22,12 @@ module.exports = {
         'dark-200': '0 3px 15 #171A2188',
       },
       animation: {
-        'increase-height': 'loading 1s ease-in infinite',
+        'loading': 'loadCircle 1s ease-in infinite',
       },
       keyframes: {
-        height: {
+        loadCircle: {
           'from': {boxShadow: '-72px 0 #f5a302 inset'},
-          'to': {boxShadow: '-72px 0 #f5a302 inset'},
+          'to': {boxShadow: '45px 0 #f5a302 inset'},
         }
       }
     },
