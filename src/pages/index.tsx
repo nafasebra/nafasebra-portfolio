@@ -148,23 +148,6 @@ function index(props: PropType) {
                 <h2 className="font-medium text-orange text-5xl leading-[4.5rem] ">
                   مقاله های تازه <br /> منتشر شده...
                 </h2>
-                <p className="text-light hover:text-orange flex items-center py-3 cursor-pointer transition-all">
-                  <span className="ml-3">بیشتر ببین</span>
-                  <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M7 16l-4-4m0 0l4-4m-4 4h18"
-                    />
-                  </svg>
-                </p>
               </div>
               <div className="w-full md:w-[70%]">
                 {props.posts.map((item) => (

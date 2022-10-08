@@ -3,6 +3,9 @@
  */
 const nextConfig = {
     reactStrictMode: true,
+    devIndicators: {
+        buildActivity: false
+    }
 }
 
 export default nextConfig

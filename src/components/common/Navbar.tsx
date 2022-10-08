@@ -12,8 +12,8 @@ function Navbar() {
 
   return (
     <nav
-      className={`w-full bg-dark-100 z-30 fixed top-0 ${
-        scrolled && "shadow-lg animate-sticky"
+      className={`w-full bg-dark-100 z-30 ${
+        scrolled && "fixed top-0 shadow-lg animate-sticky"
       }`}
     >
       <Container>
