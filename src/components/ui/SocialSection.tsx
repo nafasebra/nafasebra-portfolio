@@ -7,7 +7,7 @@ function SocialSection() {
       <li className="ml-5">
         <a
           href="https://www.linkedin.com/in/nafas-ebrahimi-325653189/"
-          className="block text-light p-1 hover:text-orange cursor-pointer"
+          className="block text-light p-1 hover:text-orange hover:-translate-y-1 cursor-pointer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +32,7 @@ function SocialSection() {
       <li className="ml-5">
         <a
           href="https://github.com/nafasebra"
-          className="block text-light p-1 hover:text-orange cursor-pointer"
+          className="block text-light p-1 hover:text-orange hover:-translate-y-1 cursor-pointer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +51,7 @@ function SocialSection() {
       </li>
       {/* the youtube link */}
       {/* <li className='ml-5'>
-            <a href="#" className='block text-light p-1 hover:text-orange cursor-pointer'>
+            <a href="#" className='block text-light p-1 hover:text-orange hover:-translate-y-1 cursor-pointer'>
               <svg xmlns="http://www.w3.org/2000/svg" className='w-7 h-7 transition-none' viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                 <rect x="3" y="5" width="18" height="14" rx="4" />
@@ -63,7 +63,7 @@ function SocialSection() {
       <li className="">
         <a
           href="https://mail.google.com/mail/?view=cm&fs=1&to=ebranafas@gmail.com&su=SUBJECT&body=BODY"
-          className="block text-light p-1 hover:text-orange cursor-pointer"
+          className="block text-light p-1 hover:text-orange hover:-translate-y-1 cursor-pointer"
           target="_blank"
         >
           <svg

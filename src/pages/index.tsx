@@ -43,7 +43,7 @@ function index(props: PropType) {
       <main>
         {/* about me section */}
         <DarkSection id="about">
-          <div className="block pb-14">
+          <div className="pb-16">
             <p className="text-light pb-4">
               درباره <span className="text-orange">من</span>
             </p>
@@ -65,9 +65,9 @@ function index(props: PropType) {
         </DarkSection>
 
         {/* skills section */}
-        <section className="py-24" id="skills">
+        <section className="py-32" id="skills">
           <Container>
-            <div className="block pb-14">
+            <div className="pb-16">
               <p className="text-light pb-4">
                 مهارت های <span className="text-orange">من</span>
               </p>
@@ -118,7 +118,7 @@ function index(props: PropType) {
         </section>
 
         <DarkSection id="projects">
-          <div className="block pb-14">
+          <div className="pb-16">
             <p className="text-light pb-4">
               پروژه های <span className="text-orange">من</span>
             </p>
