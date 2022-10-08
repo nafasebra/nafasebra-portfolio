@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { AppProps } from "next/app";
 import "../styles/global.css";
-import SplashScreen from "../components/common/SplashScreen";
 
 function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
