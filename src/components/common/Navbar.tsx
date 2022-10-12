@@ -18,6 +18,9 @@ function Navbar() {
     >
       <Container>
         <div className="w-full flex items-center justify-between py-5 px-2">
+          <button className="flex md:hidden items-center justify-center text-light">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" /></svg>
+          </button>
           <h1 className="text-3xl font-bold text-orange">ne.dev</h1>
           <ul className="hidden md:flex items-center">
             <li className="mx-2">
