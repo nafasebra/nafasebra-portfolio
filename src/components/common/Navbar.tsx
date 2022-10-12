@@ -19,11 +19,11 @@ function Navbar() {
       <Container>
         <div className="w-full flex items-center justify-between py-5 px-2">
           <h1 className="text-3xl font-bold text-orange">ne.dev</h1>
-          <ul className="flex items-center">
+          <ul className="hidden md:flex items-center">
             <li className="mx-2">
               <a
                 href="#header"
-                className='text-light py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
+                className='text-gray-200 text-sm py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
               >
                 صفحه اصلی
               </a>
@@ -31,7 +31,7 @@ function Navbar() {
             <li className="mx-2">
               <a
                 href="#about"
-                className='text-light py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
+                className='text-gray-200 text-sm py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
               >
                 درباره من
               </a>
@@ -39,7 +39,7 @@ function Navbar() {
             <li className="mx-2">
               <a
                 href="#projects"
-                className='text-light py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
+                className='text-gray-200 text-sm py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
               >
                 پروژه ها
               </a>
@@ -47,7 +47,7 @@ function Navbar() {
             <li className="mx-2">
               <a
                 href="#skills"
-                className='text-light py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
+                className='text-gray-200 text-sm py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
               >
                 مهارت ها
               </a>
@@ -55,7 +55,7 @@ function Navbar() {
             <li className="mx-2">
               <a
                 href="#blog"
-                className='text-light py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
+                className='text-gray-200 text-sm py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
               >
                 بلاگ
               </a>
