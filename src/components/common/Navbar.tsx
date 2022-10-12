@@ -12,6 +12,15 @@ function Navbar() {
     );
   }, [scrolled]);
 
+  const SetOpeningSidebar = useCallback(
+    () => setShowMenu(true),
+    [showMenu, setShowMenu]
+  );
+
+  const SetClosingSidebar = useCallback(
+    () => setShowMenu(false),
+    [showMenu, setShowMenu]
+  );
 
   return (
     <>
@@ -22,7 +31,7 @@ function Navbar() {
       >
         <Container>
           <div className="w-full flex items-center justify-between py-5 px-2">
-            <button className="flex md:hidden items-center justify-center text-light">
+            <button onClick={SetOpeningSidebar} className="flex md:hidden items-center justify-center text-light">
               <svg
                 className="w-6 h-6"
                 fill="none"
@@ -102,7 +111,7 @@ function Navbar() {
           </div>
         </Container>
       </nav>
-      <Sidebar show={showMenu} />
+      <Sidebar show={showMenu} setClose={SetClosingSidebar} />
     </>
   );
 }
