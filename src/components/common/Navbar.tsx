@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect } from "react";
 import Container from "../layout/Container";
 import Sidebar from "./Sidebar";
+import Link from "next/link"
 
 function Navbar() {
   const [scrolled, setScrolled] = React.useState<boolean>(false);
@@ -50,44 +51,44 @@ function Navbar() {
             <h1 className="text-3xl font-bold text-orange">ne.dev</h1>
             <ul className="hidden md:flex items-center">
               <li className="mx-2">
-                <a
+                <Link
                   href="#header"
                   className='text-gray-200 text-sm py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
                 >
                   صفحه اصلی
-                </a>
+                </Link>
               </li>
               <li className="mx-2">
-                <a
+                <Link
                   href="#about"
                   className='text-gray-200 text-sm py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
                 >
                   درباره من
-                </a>
+                </Link>
               </li>
               <li className="mx-2">
-                <a
+                <Link
                   href="#projects"
                   className='text-gray-200 text-sm py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
                 >
                   پروژه ها
-                </a>
+                </Link>
               </li>
               <li className="mx-2">
-                <a
+                <Link
                   href="#skills"
                   className='text-gray-200 text-sm py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
                 >
                   مهارت ها
-                </a>
+                </Link>
               </li>
               <li className="mx-2">
-                <a
+                <Link
                   href="#blog"
                   className='text-gray-200 text-sm py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
                 >
                   بلاگ
-                </a>
+                </Link>
               </li>
             </ul>
             <div className="flex items-center">
