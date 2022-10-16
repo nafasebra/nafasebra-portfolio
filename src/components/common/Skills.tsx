@@ -63,6 +63,10 @@ function Skills() {
         <Image src={reactIcon} alt="react js icon" />
         <span className="ml-3">NextJS</span>
       </div>
+      <div className="py-3 px-4 text-light rounded-lg bg-dark-200">
+        <Image src={figmaIcon} alt="figma icon" />
+        <span className="ml-3">AdobeXD/Figma</span>
+      </div>
     </div>
   );
 }
