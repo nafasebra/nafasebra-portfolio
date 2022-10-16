@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect } from "react";
-import Link from "next/link"
+import Link from "next/link";
 import Container from "../layout/Container";
 import Sidebar from "./Sidebar";
 import ThemeSwitcher from "../ui/ThemeSwitcher";
@@ -33,7 +33,10 @@ function Navbar() {
       >
         <Container>
           <div className="w-full flex items-center justify-between py-5 px-2">
-            <button onClick={SetOpeningSidebar} className="flex md:hidden items-center justify-center text-light">
+            <button
+              onClick={SetOpeningSidebar}
+              className="flex md:hidden items-center justify-center text-light"
+            >
               <svg
                 className="w-6 h-6"
                 fill="none"
@@ -49,7 +52,6 @@ function Navbar() {
                 />
               </svg>
             </button>
-            <h1 className="text-3xl font-bold text-orange">ne.dev</h1>
             <ul className="hidden md:flex items-center">
               <li className="mx-2">
                 <Link
@@ -92,9 +94,11 @@ function Navbar() {
                 </Link>
               </li>
             </ul>
-            <div className="flex items-center">
+            <h1 className="text-3xl font-bold text-orange">ne.dev</h1>
+            {/* TODO: i will set light theme later... */}
+            {/* <div className="flex items-center">
               <ThemeSwitcher />
-            </div>
+            </div> */}
           </div>
         </Container>
       </nav>
