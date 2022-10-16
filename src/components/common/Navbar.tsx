@@ -1,7 +1,8 @@
 import React, { useCallback, useEffect } from "react";
+import Link from "next/link"
 import Container from "../layout/Container";
 import Sidebar from "./Sidebar";
-import Link from "next/link"
+import ThemeSwitcher from "../ui/ThemeSwitcher";
 
 function Navbar() {
   const [scrolled, setScrolled] = React.useState<boolean>(false);
