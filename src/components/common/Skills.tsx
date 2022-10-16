@@ -17,51 +17,51 @@ function Skills() {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 font-poppins text-left">
       <div className="py-3 px-4 text-light rounded-lg bg-dark-200">
         <Image src={htmlIcon} alt="html icon" />
-        <span>HTML</span>
+        <span className="ml-3">HTML</span>
       </div>
       <div className="py-3 px-4 text-light rounded-lg bg-dark-200">
         <Image src={cssIcon} alt="css icon" />
-        <span>CSS</span>
+        <span className="ml-3">CSS</span>
       </div>
       <div className="py-3 px-4 text-light rounded-lg bg-dark-200">
         <Image src={jsIcon} alt="js icon" />
-        <span>JavaScript</span>
+        <span className="ml-3">JavaScript</span>
       </div>
       <div className="py-3 px-4 text-light rounded-lg bg-dark-200">
         <Image src={cssIcon} alt="css icon" />
-        <span>TailwindCSS</span>
+        <span className="ml-3">TailwindCSS</span>
       </div>
       <div className="py-3 px-4 text-light rounded-lg bg-dark-200">
         <Image src={cssIcon} alt="css icon" />
-        <span>Bootstrap</span>
+        <span className="ml-3">Bootstrap</span>
       </div>
       <div className="py-3 px-4 text-light rounded-lg bg-dark-200">
         <Image src={sassIcon} alt="sass icon" />
-        <span>SASS/LESS</span>
+        <span className="ml-3">SASS/LESS</span>
       </div>
       <div className="py-3 px-4 text-light rounded-lg bg-dark-200">
         <Image src={reactIcon} alt="react js icon" />
-        <span>ReactJS</span>
+        <span className="ml-3">ReactJS</span>
       </div>
       <div className="py-3 px-4 text-light rounded-lg bg-dark-200">
         <Image src={reactIcon} alt="react js icon" />
-        <span>Redux(toolkit)</span>
+        <span className="ml-3">Redux(toolkit)</span>
       </div>
       <div className="py-3 px-4 text-light rounded-lg bg-dark-200">
         <Image src={tsIcon} alt="typescript icon" />
-        <span>TypeScript</span>
+        <span className="ml-3">TypeScript</span>
       </div>
       <div className="py-3 px-4 text-light rounded-lg bg-dark-200">
         <Image src={npmIcon} alt="npm icon" />
-        <span>NPM/Yarn</span>
+        <span className="ml-3">NPM/Yarn</span>
       </div>
       <div className="py-3 px-4 text-light rounded-lg bg-dark-200">
         <Image src={gitIcon} alt="git icon" />
-        <span>Git</span>
+        <span className="ml-3">Git</span>
       </div>
       <div className="py-3 px-4 text-light rounded-lg bg-dark-200">
         <Image src={reactIcon} alt="react js icon" />
-        <span>NextJS</span>
+        <span className="ml-3">NextJS</span>
       </div>
     </div>
   );
