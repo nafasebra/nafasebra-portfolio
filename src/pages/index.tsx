@@ -107,8 +107,8 @@ function index(props: PropType) {
         <section className="py-36" id="blog">
           <Container>
             <div className="flex flex-col md:flex-row justify-between">
-              <div className="w-full md:w-[28%]">
-                <h2 className="font-medium text-orange text-5xl leading-[4.5rem] ">
+              <div className="w-full md:w-[28%] mb-5 md:mb-0">
+                <h2 className="font-bold text-orange text-xl lg:text-5xl leading-[4.5rem] ">
                   مقاله های تازه <br /> منتشر شده...
                 </h2>
               </div>

@@ -13,7 +13,7 @@ function Header() {
         </p>
         <SocialSection />
       </div>
-      <div className='w-[90%] lg:w-[48%]'>
+      <div className='w-[90%] lg:w-[48%] mb-5 md:mb-0'>
         {/* image content */}
       </div>
     </header>
