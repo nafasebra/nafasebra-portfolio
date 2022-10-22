@@ -9,8 +9,8 @@ type PropType = {
 function Sidebar({ show, setClose }: PropType) {
   return (
     <div
-      className={`fixed -z-20 -top-40 left-0 right-0 -translate-y-10 rounded-full bg-black flex flex-col items-center justify-center w-0 h-0 ${
-        show && "z-10 translate-y-0 w-[calc(100vw * 2)] h-[calc(100vh * 2)]"
+      className={`fixed -z-20 hidden -top-40 left-0 right-0 -translate-y-10 rounded-full bg-black flex-col items-center justify-center w-0 h-0 ${
+        show && "z-10 opacity-10 flex translate-y-0 w-[calc(100vw * 2)] h-[calc(100vh * 2)]"
       }`}
     >
       <div
@@ -44,7 +44,7 @@ function Sidebar({ show, setClose }: PropType) {
             <li className="mx-2">
               <Link
                 href="#header"
-                className='text-gray-200 text-sm py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
+                className='text-gray-200 text-sm py-3 mx-2 relative'
               >
                 صفحه اصلی
               </Link>
@@ -52,7 +52,7 @@ function Sidebar({ show, setClose }: PropType) {
             <li className="mx-2">
               <Link
                 href="#about"
-                className='text-gray-200 text-sm py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
+                className='text-gray-200 text-sm py-3 mx-2 relative'
               >
                 درباره من
               </Link>
@@ -60,7 +60,7 @@ function Sidebar({ show, setClose }: PropType) {
             <li className="mx-2">
               <Link
                 href="#projects"
-                className='text-gray-200 text-sm py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
+                className='text-gray-200 text-sm py-3 mx-2 relative'
               >
                 پروژه ها
               </Link>
@@ -68,7 +68,7 @@ function Sidebar({ show, setClose }: PropType) {
             <li className="mx-2">
               <Link
                 href="#skills"
-                className='text-gray-200 text-sm py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
+                className='text-gray-200 text-sm py-3 mx-2 relative'
               >
                 مهارت ها
               </Link>
@@ -76,7 +76,7 @@ function Sidebar({ show, setClose }: PropType) {
             <li className="mx-2">
               <Link
                 href="#blog"
-                className='text-gray-200 text-sm py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
+                className='text-gray-200 text-sm py-3 mx-2 relative'
               >
                 بلاگ
               </Link>

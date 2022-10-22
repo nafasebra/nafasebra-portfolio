@@ -8,7 +8,7 @@ import mainImage from '../../assets/images/Homepage.png'
 
 function Header() {
   return (
-    <header id='header' className='flex flex-col-reverse lg:flex-row items-center justify-between py-36'>
+    <header id='header' className='flex flex-col-reverse lg:flex-row items-center justify-between pt-10 pb-20'>
       <div className='w-[90%] lg:w-[48%]'>
         <p className='text-sm text-gray-300'>سلام به همگی. <span className='text-orange font-bold'>بنده</span></p>
         <h1 className='text-5xl text-orange font-bold py-5'>نفس ابراهیمی</h1>

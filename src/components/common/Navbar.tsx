@@ -1,5 +1,7 @@
 import React, { useCallback, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
+
 import Container from "../layout/Container";
 import Sidebar from "./Sidebar";
 // import ThemeSwitcher from "../ui/ThemeSwitcher";
@@ -54,47 +56,42 @@ function Navbar() {
             </button>
             <ul className="hidden md:flex items-center">
               <li className="mx-2">
-                <Link
-                  href="#header"
-                  className='text-gray-200 text-sm py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
-                >
-                  صفحه اصلی
+                <Link href="#header" passHref>
+                  <p className='cursor-pointer text-gray-200 text-sm py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'>
+                    صفحه اصلی
+                  </p>
                 </Link>
               </li>
               <li className="mx-2">
-                <Link
-                  href="#about"
-                  className='text-gray-200 text-sm py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
-                >
-                  درباره من
+                <Link href="#about" passHref>
+                  <p className='cursor-pointer text-gray-200 text-sm py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'>
+                    درباره من
+                  </p>
                 </Link>
               </li>
               <li className="mx-2">
-                <Link
-                  href="#projects"
-                  className='text-gray-200 text-sm py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
-                >
-                  پروژه ها
+                <Link href="#projects" passHref>
+                  <p className='cursor-pointer text-gray-200 text-sm py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'>
+                    نمونه کارها
+                  </p>
                 </Link>
               </li>
               <li className="mx-2">
-                <Link
-                  href="#skills"
-                  className='text-gray-200 text-sm py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
-                >
-                  مهارت ها
+                <Link href="#skills" passHref>
+                  <p className='cursor-pointer text-gray-200 text-sm py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'>
+                    مهارت ها
+                  </p>
                 </Link>
               </li>
               <li className="mx-2">
-                <Link
-                  href="#blog"
-                  className='text-gray-200 text-sm py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'
-                >
-                  بلاگ
+                <Link href="#blog" passHref>
+                  <p className='cursor-pointer text-gray-200 text-sm py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[1px] after:bg-orange hover:text-orange hover:after:w-4'>
+                    بلاگ
+                  </p>
                 </Link>
               </li>
             </ul>
-            <h1 className="text-3xl font-bold text-orange">ne.dev</h1>
+            <Image src="/logo.png" width={30} height={30} />
             {/* TODO: i will set light theme later... */}
             {/* <div className="flex items-center">
               <ThemeSwitcher />
@@ -102,7 +99,7 @@ function Navbar() {
           </div>
         </Container>
       </nav>
-      <Sidebar show={showMenu} setClose={SetClosingSidebar} />
+      {/* <Sidebar show={showMenu} setClose={SetClosingSidebar} /> */}
     </>
   );
 }
