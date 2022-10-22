@@ -25,6 +25,7 @@ function Navbar() {
     () => setShowMenu(false),
     [showMenu, setShowMenu]
   );
+  
 
   return (
     <>
@@ -40,7 +41,7 @@ function Navbar() {
               className="flex md:hidden items-center justify-center text-light"
             >
               <svg
-                className="w-6 h-6"
+                className="w-8 h-8"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -91,7 +92,7 @@ function Navbar() {
                 </Link>
               </li>
             </ul>
-            <Image src="/logo.png" width={30} height={30} />
+            <Image src="/logo.png" width={35} height={35} />
             {/* TODO: i will set light theme later... */}
             {/* <div className="flex items-center">
               <ThemeSwitcher />
