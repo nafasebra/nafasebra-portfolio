@@ -1,5 +1,10 @@
+import Image from 'next/image'
 import React from 'react'
 import SocialSection from '../ui/SocialSection'
+
+import mainImage from '../../assets/images/Homepage.png'
+
+
 
 function Header() {
   return (
@@ -14,7 +19,7 @@ function Header() {
         <SocialSection />
       </div>
       <div className='w-[90%] lg:w-[48%] mb-5 md:mb-0'>
-        {/* image content */}
+        <Image src={mainImage} className="w-[90%]" />
       </div>
     </header>
   )
