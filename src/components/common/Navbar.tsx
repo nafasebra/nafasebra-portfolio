@@ -99,7 +99,7 @@ function Navbar() {
           </div>
         </Container>
       </nav>
-      {/* <Sidebar show={showMenu} setClose={SetClosingSidebar} /> */}
+      <Sidebar show={showMenu} setClose={SetClosingSidebar} />
     </>
   );
 }
