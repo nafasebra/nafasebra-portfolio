@@ -1,5 +1,5 @@
 import React from "react";
-import Link from 'next/link'
+import Link from "next/link";
 
 type PropType = {
   show: boolean;
@@ -10,7 +10,8 @@ function Sidebar({ show, setClose }: PropType) {
   return (
     <div
       className={`fixed -z-20 hidden -top-40 left-0 right-0 -translate-y-10 rounded-full bg-black flex-col items-center justify-center w-0 h-0 ${
-        show && "z-10 opacity-10 flex translate-y-0 w-[calc(100vw * 2)] h-[calc(100vh * 2)]"
+        show &&
+        "z-10 opacity-10 flex translate-y-0 w-[calc(100vw * 2)] h-[calc(100vh * 2)]"
       }`}
     >
       <div
@@ -28,7 +29,9 @@ function Sidebar({ show, setClose }: PropType) {
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
+              <p
+                className="text-gray-200 text-sm py-3 mx-2 relative"
+                cath
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
@@ -42,43 +45,36 @@ function Sidebar({ show, setClose }: PropType) {
         >
           <li>
             <li className="mx-2">
-              <Link
-                href="#header"
-                className='text-gray-200 text-sm py-3 mx-2 relative'
-              >
-                صفحه اصلی
+              <Link href="#header" passHref>
+                <p className="text-gray-200 text-sm py-3 mx-2 relative">
+                  صفحه اصلی
+                </p>
               </Link>
             </li>
             <li className="mx-2">
-              <Link
-                href="#about"
-                className='text-gray-200 text-sm py-3 mx-2 relative'
-              >
-                درباره من
+              <Link href="#about" passHref>
+                <p className="text-gray-200 text-sm py-3 mx-2 relative">
+                  درباره من
+                </p>
               </Link>
             </li>
             <li className="mx-2">
-              <Link
-                href="#projects"
-                className='text-gray-200 text-sm py-3 mx-2 relative'
-              >
-                پروژه ها
+              <Link href="#projects" passHref>
+                <p className="text-gray-200 text-sm py-3 mx-2 relative">
+                  نمونه کارها
+                </p>
               </Link>
             </li>
             <li className="mx-2">
-              <Link
-                href="#skills"
-                className='text-gray-200 text-sm py-3 mx-2 relative'
-              >
-                مهارت ها
+              <Link href="#skills" passHref>
+                <p className="text-gray-200 text-sm py-3 mx-2 relative">
+                  مهارت ها
+                </p>
               </Link>
             </li>
             <li className="mx-2">
-              <Link
-                href="#blog"
-                className='text-gray-200 text-sm py-3 mx-2 relative'
-              >
-                بلاگ
+              <Link href="#blog" passHref>
+                <p className="text-gray-200 text-sm py-3 mx-2 relative">بلاگ</p>
               </Link>
             </li>
           </li>
