@@ -23,7 +23,7 @@ function ProjectCard(props: PropType) {
         <div>
           <p className="text-orange text-lg font-bold py-3">{name}</p>
           <div className="flex flex-col items-start justify-center md:h-[0] md:group-hover:h-[100px] overflow-hidden">
-            <p className="text-light text-sm pb-5">{description || name}</p>
+            <p className="text-light text-sm pb-5">{description?.substring(0, 100) || ''}</p>
             <a
               href={target}
               className="flex items-center text-light hover:text-orange hover:underline hover:underline-offset-8"
