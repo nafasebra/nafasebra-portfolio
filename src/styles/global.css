@@ -43,13 +43,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  transition: all 350ms;
 }
 
 body {
   margin: 0;
   position: relative;
   min-height: 100vh;
+  transition: all 350ms;
 }
 
 /* Hide default button of input num type in Chrome, Safari, Edge, Opera */
