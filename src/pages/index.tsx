@@ -11,6 +11,7 @@ import Footer from "../components/common/Footer";
 
 import SteecoScreenshot from "../assets/images/steeco-screenshot.png";
 import asrezScreenshot from "../assets/images/asrez-screenshot.png";
+import rodeoScreenshot from "../assets/images/rodeo-screenshot.png";
 import { Posts, PostType } from "../data/post";
 import Skills from "../components/common/Skills";
 
@@ -100,6 +101,11 @@ function index(props: PropType) {
               imageUrl={SteecoScreenshot}
               name="وبسایت شرکت استیل صنعت کاشان"
               target="https://steeco.ir"
+            />
+            <ProjectCard
+              imageUrl={rodeoScreenshot}
+              name="وبسایت فروشگاهی rodeoshop"
+              target="https://rodeoonline.shop/"
             />
           </div>
         </DarkSection>
