@@ -34,9 +34,7 @@ function Blog(props: PropType) {
         />
       </Head>
 
-      <Container>
-        <Navbar />
-      </Container>
+      <Navbar />
 
       <main>
         <Container>
