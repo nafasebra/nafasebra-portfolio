@@ -9,16 +9,13 @@ import BlogCard from "../components/ui/BlogCard";
 import ProjectCard from "../components/ui/ProjectCard";
 import Footer from "../components/common/Footer";
 
-import SteecoScreenshot from "../assets/images/steeco-screenshot.png";
-import asrezScreenshot from "../assets/images/asrez-screenshot.png";
-import rodeoScreenshot from "../assets/images/rodeo-screenshot.png";
 import { Posts, PostType } from "../data/post";
 import Skills from "../components/common/Skills";
+import { Projects } from "../data/projects";
 
 type PropType = {
-  posts: PostType[]
-}
-
+  posts: PostType[];
+};
 
 function index(props: PropType) {
   return (
@@ -92,21 +89,14 @@ function index(props: PropType) {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            <ProjectCard
-              imageUrl={asrezScreenshot}
-              name="وبسایت شرکت اسرز"
-              target="https://asrez.com"
-            />
-            <ProjectCard
-              imageUrl={SteecoScreenshot}
-              name="وبسایت شرکت استیل صنعت کاشان"
-              target="https://steeco.ir"
-            />
-            <ProjectCard
-              imageUrl={rodeoScreenshot}
-              name="وبسایت فروشگاهی rodeoshop"
-              target="https://rodeoonline.shop/"
-            />
+            {Projects.map((item) => (
+              <ProjectCard
+                imageUrl={item.imageUrl}
+                name={item.name}
+                target={item.target}
+                description={item.description}
+              />
+            ))}
           </div>
         </DarkSection>
 
@@ -141,7 +131,7 @@ function index(props: PropType) {
 export const getStaticProps = async () => {
   return {
     props: {
-      posts: Posts
+      posts: Posts,
     },
   };
 };
