@@ -42,8 +42,9 @@ function index(props: PropType) {
         {/* about me section */}
         <DarkSection id="about">
           <div className="pb-16">
-            <p className="text-light pb-4">
-              درباره <span className="text-orange">من</span>
+            <p className="flex items-center text-light pb-5">
+              <span className="block ml-2 w-7 h-[3px] bg-orange"></span>
+              درباره <span className="text-orange mr-1">من</span>
             </p>
             <h3 className="text-light font-bold text-3xl">من کیم؟</h3>
           </div>
@@ -66,8 +67,9 @@ function index(props: PropType) {
         <section className="py-32" id="skills">
           <Container>
             <div className="pb-16">
-              <p className="text-light pb-4">
-                مهارت های <span className="text-orange">من</span>
+              <p className="flex items-center text-light pb-5">
+                <span className="block ml-2 w-7 h-[3px] bg-orange"></span>
+                مهارت های <span className="text-orange mr-1">من</span>
               </p>
               <h3 className="text-light font-bold text-3xl">
                 چیا بلدم؟ با چه ابزار هایی کار میکنم؟
@@ -80,8 +82,9 @@ function index(props: PropType) {
 
         <DarkSection id="projects">
           <div className="pb-16">
-            <p className="text-light pb-4">
-              پروژه های <span className="text-orange">من</span>
+            <p className="flex items-center text-light pb-5">
+              <span className="block ml-2 w-7 h-[3px] bg-orange"></span>
+              پروژه های <span className="text-orange mr-1"> من </span>
             </p>
             <h3 className="text-light font-bold text-3xl">
               چه کارهایی انجام دادم؟
@@ -104,8 +107,8 @@ function index(props: PropType) {
           <Container>
             <div className="flex flex-col md:flex-row justify-between">
               <div className="w-full md:w-[28%] mb-5 md:mb-0">
-                <h2 className="font-bold text-orange text-xl lg:text-5xl leading-[4.5rem] ">
-                  مقاله های تازه <br /> منتشر شده...
+                <h2 className="font-bold text-orange text-3xl lg:text-5xl lg:leading-[5rem]">
+                  پست های تازه منتشر شده...
                 </h2>
               </div>
               <div className="w-full md:w-[70%]">

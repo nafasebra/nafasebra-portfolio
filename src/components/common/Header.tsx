@@ -19,7 +19,9 @@ function Header() {
         <SocialSection />
       </div>
       <div className='w-[90%] lg:w-[48%] mb-5 md:mb-0'>
-        <Image src={mainImage} className="w-[90%]" />
+        <div className='w-[90%] mx-auto'>
+          <Image src={mainImage} />
+        </div>
       </div>
     </header>
   )

@@ -3,7 +3,7 @@ import Container from "./Container";
 
 type PropType = {
   children: JSX.Element[] | JSX.Element;
-  id: string;
+  id?: string;
 };
 
 function DarkSection({ children, id }: PropType) {
