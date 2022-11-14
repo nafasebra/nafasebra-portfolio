@@ -4,8 +4,6 @@ import SocialSection from '../ui/SocialSection'
 
 import mainImage from '../../assets/images/Homepage.png'
 
-
-
 function Header() {
   return (
     <header id='header' className='flex flex-col-reverse lg:flex-row items-center justify-between pt-10 pb-20'>
