@@ -5,17 +5,17 @@ import Container from "../../components/layout/Container";
 import Footer from "../../components/common/Footer";
 import { Posts, PostType } from "../../data/post";
 import BlogCard from "../../components/ui/BlogCard";
-import { GetStaticProps } from "next";
+import { GetStaticPaths, GetStaticProps } from "next";
 import { ParsedUrlQuery } from "querystring";
 
-interface IContextStaticProps extends ParsedUrlQuery {
-  title: string;
-}
-
 type PropType = {
-  selectedBlog: PostType[];
+  selectedBlog: PostType;
   otherBlogs: PostType[];
 };
+
+interface IParams extends ParsedUrlQuery {
+  title: string
+}
 
 function Blog(props: PropType) {
   const { otherBlogs, selectedBlog } = props;
@@ -41,21 +41,21 @@ function Blog(props: PropType) {
           <div className="flex flex-col lg:flex-row justify-between py-20">
             <article className="w-full lg:w-[65%]">
               <h1 className="text-orange text-4xl font-bold">
-                {selectedBlog[0]?.title}
+                {selectedBlog?.title}
               </h1>
               <p className="text-gray-400 py-5 text-sm">
-                {selectedBlog[0]?.date}
+                {selectedBlog?.date}
               </p>
               <div
                 className="text-gray-300 text-sm py-5 leading-7"
-                dangerouslySetInnerHTML={{ __html: selectedBlog[0]?.body }}
+                dangerouslySetInnerHTML={{ __html: selectedBlog?.body || "lorem ipsom"}}
               ></div>
             </article>
             <aside className="w-full lg:w-[30%]">
               <h3 className="text-light text-lg leading-8 pb-7">
                 بقیه مقاله های منتشر شده...
               </h3>
-              {otherBlogs?.map((item) => (
+              {otherBlogs.map((item) => (
                 <BlogCard
                   key={item.id}
                   date={item.date}
@@ -73,8 +73,21 @@ function Blog(props: PropType) {
   );
 }
 
-export const getServerSideProps: GetStaticProps = async (context) => {
-  const { title } = context.params as IContextStaticProps;
+export const getStaticPaths: GetStaticPaths = async () => {
+  const titles = Posts.map(item => item.title);
+  const paths = titles.map(title => (
+    { params: { title } }
+  ))
+  console.log(titles, paths);
+
+  return {
+      paths,
+      fallback: false
+  }
+}
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const { title } = context.params as IParams;
   const selectedBlog = Posts.filter(
     (item) => item.title === decodeURIComponent(title)
   );
@@ -84,10 +97,10 @@ export const getServerSideProps: GetStaticProps = async (context) => {
 
   return {
     props: {
-      selectedBlog: selectedBlog,
+      selectedBlog: selectedBlog[0],
       otherBlogs: otherBlogs,
-    },
-  };
+    }
+  }
 };
 
 export default Blog;
