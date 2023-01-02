@@ -8,7 +8,7 @@ const nextConfig = {
     },
     images: {
         domains: ['nafasebra.netlify.app'],
-        path: '/_next/image/'
+        path: '/'
     },
 }
 
