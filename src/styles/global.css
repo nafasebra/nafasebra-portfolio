@@ -13,16 +13,16 @@
 @font-face {
   font-family: 'vazir';
   font-weight: 500;
-  src: url('../assets/fonts/Vazir-Regular-FD.ttf') format('truetype'),
-    url('../assets/fonts/Vazir-Regular-FD.woff') format('woff'),
-    url('../assets/fonts/Vazir-Regular-FD.woff2') format('woff2');
+  src: url('/assets/fonts/Vazir-Regular-FD.ttf') format('truetype'),
+    url('/assets/fonts/Vazir-Regular-FD.woff') format('woff'),
+    url('/assets/fonts/Vazir-Regular-FD.woff2') format('woff2');
 }
 @font-face {
   font-family: 'vazir';
   font-weight: 800;
-  src: url('../assets/fonts/Vazir-Bold-FD.ttf') format('truetype'),
-    url('../assets/fonts/Vazir-Bold-FD.woff') format('woff'),
-    url('../assets/fonts/Vazir-Bold-FD.woff2') format('woff2');
+  src: url('/assets/fonts/Vazir-Bold-FD.ttf') format('truetype'),
+    url('/assets/fonts/Vazir-Bold-FD.woff') format('woff'),
+    url('/assets/fonts/Vazir-Bold-FD.woff2') format('woff2');
 }
 
 *,
