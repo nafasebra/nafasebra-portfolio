@@ -16,9 +16,9 @@ function Header() {
         </p>
         <SocialSection />
       </div>
-      <div className='w-[90%] lg:w-[48%] mb-5 md:mb-0'>
-        <div className='w-[90%] mx-auto'>
-          <Image src={mainImage} />
+      <div className='w-[90%] h-full lg:w-[48%] mb-5 md:mb-0'>
+        <div className='w-[90%] h-[650px] relative object-contain mx-auto'>
+          <Image layout="fill" alt="nafasebra homepage" src="/assets/images/Homepage.png" />
         </div>
       </div>
     </header>

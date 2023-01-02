@@ -91,8 +91,12 @@ function Navbar() {
                   </p>
                 </Link>
               </li>
-            </ul>
-            <Image src="/logo.png" width={35} height={35} />
+            </ul> 
+            <div className="w-8 h-8">
+              <div className="w-full h-full relative">
+                <Image layout="fill" alt="nafasebra logo" src="/logo.png" />
+              </div>
+            </div>
             {/* TODO: i will set light theme later... */}
             {/* <div className="flex items-center">
               <ThemeSwitcher />
