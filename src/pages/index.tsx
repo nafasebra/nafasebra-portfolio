@@ -39,6 +39,29 @@ function index(props: PropType) {
       </Container>
 
       <main>
+        {/* about me section */}
+        <DarkSection id="services">
+          <div className="pb-16">
+            <p className="flex items-center text-light pb-5">
+              <span className="block ml-2 w-7 h-[3px] bg-orange"></span>
+              خدماتی که <span className="text-orange mr-1">ارائه می‌دم</span>
+            </p>
+            <h3 className="text-light font-bold text-3xl">چه کارهایی انجام میدم؟</h3>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div className="rounded-lg bg-dark-100 shadow-dark-100 p-6 flex items-center gap-4 text-white">
+              تدریس خصوصی
+            </div>
+            <div className="rounded-lg bg-dark-100 shadow-dark-100 p-6 flex items-center gap-4 text-white">
+              پیاده سازی قالب سایت
+            </div>
+            <div className="rounded-lg bg-dark-100 shadow-dark-100 p-6 flex items-center gap-4 text-white">
+              پیاده سازی و توسعه اپلیکیشن های React و NextJS
+            </div>
+          </div>
+        </DarkSection>
+
         {/* skills section */}
         <section className="py-32" id="skills">
           <Container>
