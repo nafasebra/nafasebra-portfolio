@@ -39,30 +39,6 @@ function index(props: PropType) {
       </Container>
 
       <main>
-        {/* about me section */}
-        <DarkSection id="about">
-          <div className="pb-16">
-            <p className="flex items-center text-light pb-5">
-              <span className="block ml-2 w-7 h-[3px] bg-orange"></span>
-              درباره <span className="text-orange mr-1">من</span>
-            </p>
-            <h3 className="text-light font-bold text-3xl">من کیم؟</h3>
-          </div>
-
-          <div className="flex flex-col-reverse md:flex-row items-center justify-between">
-            <div className="w-full md:w-[45%]">
-              <p className="text-gray-400 leading-7">
-                حدودا دو سه سالی هست برنامه نویسی فرانت اند کار میکنم. علاقه مند
-                به خلق کردن, یاددادن و یادگیری. علاقه مند به کارهای تیمی و
-                اینچیزا :) برای همینه که شغل برنامه نویسی رو انتخاب کردم <br />
-                رسالتم اینه که برای جامعه اونطوری که از دستم برمیاد کاری انجام
-                بدم و دنیا رو یک جای راحتی برای انسان های دوست داشتنی تبدیل کنم
-              </p>
-            </div>
-            <div className="w-full md:w-[45%]">{/* image content */}</div>
-          </div>
-        </DarkSection>
-
         {/* skills section */}
         <section className="py-32" id="skills">
           <Container>
