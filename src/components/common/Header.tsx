@@ -23,18 +23,6 @@ function Header() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col-reverse md:flex-row items-center justify-between pt-28 pb-36">
-        <div className="w-full md:w-[45%]">{/* image content */}</div>
-        <div className="w-full md:w-[45%]">
-          <p className="text-gray-400 leading-7">
-            حدودا دو سه سالی هست برنامه نویسی فرانت اند کار میکنم. علاقه مند
-            به خلق کردن, یاددادن و یادگیری. علاقه مند به کارهای تیمی و
-            اینچیزا :) برای همینه که شغل برنامه نویسی رو انتخاب کردم <br />
-            رسالتم اینه که برای جامعه اونطوری که از دستم برمیاد کاری انجام
-            بدم و دنیا رو یک جای راحتی برای انسان های دوست داشتنی تبدیل کنم
-          </p>
-        </div>
-      </div>
     </header>
   )
 }

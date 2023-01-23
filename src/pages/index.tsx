@@ -50,14 +50,32 @@ function index(props: PropType) {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            <div className="rounded-lg bg-dark-100 shadow-dark-100 p-6 flex items-center gap-4 text-white">
-              تدریس خصوصی
+            <div className="rounded-lg bg-dark-100 shadow-dark-100 p-6 flex flex-col gap-4">
+              <div className="flex items-center gap-3">
+                <div className="w-7 h-7 flex items-center justify-center text-sm shadow-md shadow-orange/30 rounded-full bg-orange text-white">1</div>
+                <p className="font-bold text-white">پیاده سازی قالب سایت</p>
+              </div>
+              <p className="text-sm text-gray-300 text-justify leading-[1.7rem]">
+                برای انجام پروژه میتونید روی من حساب کنید
+              </p>
             </div>
-            <div className="rounded-lg bg-dark-100 shadow-dark-100 p-6 flex items-center gap-4 text-white">
-              پیاده سازی قالب سایت
+            <div className="rounded-lg bg-dark-100 shadow-dark-100 p-6 flex flex-col gap-4">
+              <div className="flex items-center gap-3">
+                <div className="w-7 h-7 flex items-center justify-center text-sm shadow-md shadow-orange/30 rounded-full bg-orange text-white">2</div>
+                <p className="font-bold text-white">توسعه پروژه های React و NextJS</p>
+              </div>
+              <p className="text-sm text-gray-300 text-justify leading-[1.7rem]">
+                برای انجام پروژه میتونید روی من حساب کنید
+              </p>
             </div>
-            <div className="rounded-lg bg-dark-100 shadow-dark-100 p-6 flex items-center gap-4 text-white">
-              پیاده سازی و توسعه اپلیکیشن های React و NextJS
+            <div className="rounded-lg bg-dark-100 shadow-dark-100 p-6 flex flex-col gap-4">
+              <div className="flex items-center gap-3">
+                <div className="w-7 h-7 flex items-center justify-center text-sm shadow-md shadow-orange/30 rounded-full bg-orange text-white">3</div>
+                <p className="font-bold text-white">تدریس خصوصی</p>
+              </div>
+              <p className="text-sm text-gray-300 text-justify leading-[1.7rem]">
+                برای انجام پروژه میتونید روی من حساب کنید
+              </p>
             </div>
           </div>
         </DarkSection>
