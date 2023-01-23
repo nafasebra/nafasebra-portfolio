@@ -12,6 +12,8 @@ import Footer from "../components/common/Footer";
 import { Posts, PostType } from "../data/post";
 import Skills from "../components/common/Skills";
 import { Projects } from "../data/projects";
+import { ServicesData } from "../data/services";
+import ServiceCard from "../components/ui/ServiceCard";
 
 type PropType = {
   posts: PostType[];
@@ -50,7 +52,11 @@ function index(props: PropType) {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            
+            {
+              ServicesData.map((item, index) => (
+                <ServiceCard key={index} title={item.title} description={item.description} id={index + 1} />
+              ))
+            }
           </div>
         </DarkSection>
 
