@@ -1,5 +1,5 @@
 import React from "react";
-import Loading from "../ui/Loading";
+import Loading from "@components/ui/Loading";
 
 function SplashScreen() {
   return (

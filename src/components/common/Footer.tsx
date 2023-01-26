@@ -1,7 +1,8 @@
 import React from "react";
-import DarkSection from "../layout/DarkSection";
 import Image from 'next/image'
-import SocialSection from "../ui/SocialSection";
+
+import DarkSection from "@components/layout/DarkSection";
+import SocialSection from "@components/ui/SocialSection";
 
 function Footer() {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import Container from "./Container";
+import Container from "@components/layout/Container";
 
 type PropType = {
   children: JSX.Element[] | JSX.Element;

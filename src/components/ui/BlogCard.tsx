@@ -1,5 +1,5 @@
 import React from "react";
-import { removeHtmlTag } from "../../helper";
+import { removeHtmlTag } from "@helper/index";
 import Link from 'next/link';
 
 type PropType = {

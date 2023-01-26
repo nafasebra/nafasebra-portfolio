@@ -1,14 +1,13 @@
-import React, { useCallback, useEffect } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import Container from "../layout/Container";
-import Sidebar from "./Sidebar";
-// import ThemeSwitcher from "../ui/ThemeSwitcher";
+import Container from "@components/layout/Container";
+import Sidebar from "@components/common/Sidebar";
 
 function Navbar() {
-  const [scrolled, setScrolled] = React.useState<boolean>(false);
-  const [showMenu, setShowMenu] = React.useState<boolean>(false);
+  const [scrolled, setScrolled] = useState<boolean>(false);
+  const [showMenu, setShowMenu] = useState<boolean>(false);
 
   useEffect(() => {
     document.addEventListener("scroll", () =>

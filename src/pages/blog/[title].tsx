@@ -1,12 +1,12 @@
 import Head from "next/head";
-
-import Navbar from "../../components/common/Navbar";
-import Container from "../../components/layout/Container";
-import Footer from "../../components/common/Footer";
-import { Posts, PostType } from "../../data/post";
-import BlogCard from "../../components/ui/BlogCard";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { ParsedUrlQuery } from "querystring";
+
+import Container from "@components/layout/Container";
+import Navbar from "@components/common/Navbar";
+import Footer from "@components/common/Footer";
+import BlogCard from "@components/ui/BlogCard";
+import { Posts, PostType } from "@data/post";
 
 type PropType = {
   selectedBlog: PostType;
@@ -30,7 +30,7 @@ function Blog(props: PropType) {
         />
         <meta
           name="description"
-          content="سلام به همگی. بنده نفس ابراهیمی هستم و درحوزه برنامه نویسی فرانت اند کار میکنم. خوشحال میشم یک سری به سایتم بزنی. راستی خیلی اتفاقا قراره اینجا بیوفته :)"
+          content="سلام به همگی. بنده نفس ابراهیمی هستم و درحوزه برنامه نویسی فرانت اند کار میکنم. خوشحال میشم یک سری به سایتم بزنی. :)"
         />
       </Head>
 

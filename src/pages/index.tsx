@@ -1,19 +1,19 @@
 import Head from "next/head";
 import React from "react";
 
-import Container from "../components/layout/Container";
-import DarkSection from "../components/layout/DarkSection";
-import Header from "../components/common/Header";
-import Navbar from "../components/common/Navbar";
-import BlogCard from "../components/ui/BlogCard";
-import ProjectCard from "../components/ui/ProjectCard";
-import Footer from "../components/common/Footer";
+import Container from "@components/layout/Container";
+import DarkSection from "@components/layout/DarkSection";
+import Navbar from "@components/common/Navbar";
+import Header from "@components/common/Header";
+import ServiceCard from "@components/ui/ServiceCard";
+import Skills from "@components/common/Skills";
+import ProjectCard from "@components/ui/ProjectCard";
+import BlogCard from "@components/ui/BlogCard";
+import Footer from "@components/common/Footer";
 
-import { Posts, PostType } from "../data/post";
-import Skills from "../components/common/Skills";
-import { Projects } from "../data/projects";
-import { ServicesData } from "../data/services";
-import ServiceCard from "../components/ui/ServiceCard";
+import { Posts, PostType } from "@data/post";
+import { Projects } from "@data/projects";
+import { ServicesData } from "@data/services";
 
 type PropType = {
   posts: PostType[];
@@ -30,7 +30,7 @@ function index(props: PropType) {
         />
         <meta
           name="description"
-          content="سلام به همگی. بنده نفس ابراهیمی هستم و درحوزه برنامه نویسی فرانت اند کار میکنم. خوشحال میشم یک سری به سایتم بزنی. راستی خیلی اتفاقا قراره اینجا بیوفته :)"
+          content="سلام به همگی. بنده نفس ابراهیمی هستم و درحوزه برنامه نویسی فرانت اند کار میکنم. خوشحال میشم یک سری به سایتم بزنی. :)"
         />
       </Head>
 

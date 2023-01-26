@@ -1,8 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
-import SocialSection from '../ui/SocialSection'
 
-import mainImage from '../../assets/images/Homepage.png'
+import SocialSection from '@components/ui/SocialSection'
 
 function Header() {
   return (
