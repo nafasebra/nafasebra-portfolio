@@ -48,15 +48,20 @@ function index(props: PropType) {
               <span className="block ml-2 w-7 h-[3px] bg-orange"></span>
               خدماتی که <span className="text-orange mr-1">ارائه می‌دم</span>
             </p>
-            <h3 className="text-light font-bold text-3xl">چه کارهایی انجام میدم؟</h3>
+            <h3 className="text-light font-bold text-3xl">
+              چه کارهایی انجام میدم؟
+            </h3>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {
-              ServicesData.map((item, index) => (
-                <ServiceCard key={index} title={item.title} description={item.description} id={index + 1} />
-              ))
-            }
+            {ServicesData.map((item, index) => (
+              <ServiceCard
+                key={index}
+                title={item.title}
+                description={item.description}
+                id={index + 1}
+              />
+            ))}
           </div>
         </DarkSection>
 

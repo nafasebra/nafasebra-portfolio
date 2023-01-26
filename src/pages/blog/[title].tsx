@@ -14,7 +14,7 @@ type PropType = {
 };
 
 interface IParams extends ParsedUrlQuery {
-  title: string
+  title: string;
 }
 
 function Blog(props: PropType) {
@@ -43,12 +43,12 @@ function Blog(props: PropType) {
               <h1 className="text-orange text-4xl font-bold">
                 {selectedBlog?.title}
               </h1>
-              <p className="text-gray-400 py-5 text-sm">
-                {selectedBlog?.date}
-              </p>
+              <p className="text-gray-400 py-5 text-sm">{selectedBlog?.date}</p>
               <div
                 className="text-gray-300 text-sm py-5 leading-7"
-                dangerouslySetInnerHTML={{ __html: selectedBlog?.body || "lorem ipsom"}}
+                dangerouslySetInnerHTML={{
+                  __html: selectedBlog?.body || "lorem ipsom",
+                }}
               ></div>
             </article>
             <aside className="w-full lg:w-[30%]">
@@ -74,17 +74,15 @@ function Blog(props: PropType) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const titles = Posts.map(item => item.title);
-  const paths = titles.map(title => (
-    { params: { title } }
-  ))
+  const titles = Posts.map((item) => item.title);
+  const paths = titles.map((title) => ({ params: { title } }));
   console.log(titles, paths);
 
   return {
-      paths,
-      fallback: false
-  }
-}
+    paths,
+    fallback: false,
+  };
+};
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const { title } = context.params as IParams;
@@ -99,8 +97,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
     props: {
       selectedBlog: selectedBlog[0],
       otherBlogs: otherBlogs,
-    }
-  }
+    },
+  };
 };
 
 export default Blog;

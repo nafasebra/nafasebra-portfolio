@@ -24,7 +24,6 @@ function Navbar() {
     () => setShowMenu(false),
     [showMenu, setShowMenu]
   );
-  
 
   return (
     <>
@@ -90,7 +89,7 @@ function Navbar() {
                   </p>
                 </Link>
               </li>
-            </ul> 
+            </ul>
             <div className="w-8 h-8">
               <div className="w-full h-full relative">
                 <Image layout="fill" alt="nafasebra logo" src="/logo.png" />

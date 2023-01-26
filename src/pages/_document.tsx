@@ -7,7 +7,7 @@ import {
   DocumentContext,
   DocumentInitialProps,
 } from "next/document";
-import Document from 'next/document'
+import Document from "next/document";
 import SplashScreen from "../components/common/SplashScreen";
 
 function _document() {
