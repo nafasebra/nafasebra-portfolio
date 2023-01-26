@@ -1,5 +1,13 @@
 {
   "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@components/*": ["components/*"],
+      "@data/*": ["data/*"],
+      "@helper/*": ["helper/*"],
+      "@styles/*": ["styles/*"],
+      // "@/types/*": ["types/*"],
+    },
     "target": "ESNext",
     "useDefineForClassFields": true,
     "lib": [
