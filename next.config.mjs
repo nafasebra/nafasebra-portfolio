@@ -8,8 +8,7 @@ const nextConfig = {
   },
   images: {
     domains: [
-      "https://nafasebra.netlify.app/",
-      "https://www.nafasebra.netlify.app/",
+      "nafasebra.netlify.app",
     ],
   },
 };
