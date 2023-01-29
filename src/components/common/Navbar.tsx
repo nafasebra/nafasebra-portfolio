@@ -5,6 +5,8 @@ import Image from "next/image";
 import Container from "@components/layout/Container";
 import Sidebar from "@components/common/Sidebar";
 
+import logo from "../../../public/logo.png";
+
 function Navbar() {
   const [scrolled, setScrolled] = useState<boolean>(false);
   const [showMenu, setShowMenu] = useState<boolean>(false);
@@ -92,7 +94,7 @@ function Navbar() {
             </ul>
             <div className="w-8 h-8">
               <div className="w-full h-full relative">
-                <Image layout="fill" alt="nafasebra logo" src="/logo.png" />
+                <Image layout="fill" alt="nafasebra logo" src={logo} />
               </div>
             </div>
             {/* TODO: i will set light theme later... */}
