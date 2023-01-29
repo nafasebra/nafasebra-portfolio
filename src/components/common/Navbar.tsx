@@ -92,7 +92,7 @@ function Navbar() {
             </ul>
             <div className="w-8 h-8">
               <div className="w-full h-full relative">
-                <Image layout="fill" alt="nafasebra logo" src={`${process.env.PUBLIC_URL}/logo.png`} />
+                <Image layout="fill" alt="nafasebra logo" src="/logo.png" />
               </div>
             </div>
             {/* TODO: i will set light theme later... */}
