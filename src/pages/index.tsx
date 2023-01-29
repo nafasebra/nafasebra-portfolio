@@ -15,11 +15,13 @@ import { Posts, PostType } from "@data/post";
 import { Projects } from "@data/projects";
 import { ServicesData } from "@data/services";
 
-type PropType = {
-  posts: PostType[];
-};
+import { createClient } from "@supabase/supabase-js";
 
-function index(props: PropType) {
+// type PropType = {
+//   posts: PostType[];
+// };
+
+function index(props) {
   return (
     <>
       <Head>
@@ -117,9 +119,9 @@ function index(props: PropType) {
                 {props.posts.map((item) => (
                   <BlogCard
                     key={item.id}
-                    date={item.date}
-                    title={item.title}
-                    description={item.body}
+                    date={item.created_at}
+                    title={item.blog_title}
+                    description={item.blog_description}
                   />
                 ))}
               </div>
@@ -134,9 +136,18 @@ function index(props: PropType) {
 }
 
 export const getStaticProps = async () => {
+  const supbaseInit = createClient(
+    process.env.SUPABASE_URL || "",
+    process.env.SUPABASE_KEY || ""
+  );
+
+  const { data } = await supbaseInit.from('blog').select('*');
+
+  // console.log(data)
+
   return {
     props: {
-      posts: Posts,
+      posts: data,
     },
   };
 };

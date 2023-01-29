@@ -7,9 +7,7 @@ const nextConfig = {
     buildActivity: false,
   },
   images: {
-    domains: [
-      "nafasebra.netlify.app",
-    ],
+    domains: ["nafasebra.netlify.app", "nafasebra.ir"],
   },
 };
 
