@@ -6,20 +6,21 @@ import Container from "@components/layout/Container";
 import Navbar from "@components/common/Navbar";
 import Footer from "@components/common/Footer";
 import BlogCard from "@components/ui/BlogCard";
-import { Posts, PostType } from "@data/post";
 
 import { createClient } from "@supabase/supabase-js"
 
-// type PropType = {
-//   selectedBlog: PostType;
-//   otherBlogs: PostType[];
-// };
+import { PostType } from "@/types/posts"
+
+type PropType = {
+  selectedBlog: PostType;
+  otherBlogs: PostType[];
+};
 
 interface IParams extends ParsedUrlQuery {
   title: string;
 }
 
-function Blog(props) {
+function Blog(props: PropType) {
   const { otherBlogs, selectedBlog } = props;
 
   return (
@@ -113,7 +114,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   return {
     props: {
-      selectedBlog: selectedBlog[0],
+      selectedBlog: selectedBlog,
       otherBlogs: otherBlogs,
     },
   };

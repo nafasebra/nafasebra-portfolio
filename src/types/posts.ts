@@ -1,6 +1,6 @@
 export interface PostType {
    id: number;
-   title: string;
-   date: string;
-   body: string;
+   blog_title: string;
+   created_at: string;
+   blog_description: string;
 };

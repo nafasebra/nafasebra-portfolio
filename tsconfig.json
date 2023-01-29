@@ -6,7 +6,7 @@
       "@data/*": ["data/*"],
       "@helper/*": ["helper/*"],
       "@styles/*": ["styles/*"],
-      // "@/types/*": ["types/*"],
+      "@/types/*": ["types/*"],
     },
     "target": "ESNext",
     "useDefineForClassFields": true,

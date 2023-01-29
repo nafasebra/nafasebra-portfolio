@@ -11,17 +11,18 @@ import ProjectCard from "@components/ui/ProjectCard";
 import BlogCard from "@components/ui/BlogCard";
 import Footer from "@components/common/Footer";
 
-import { Posts, PostType } from "@data/post";
 import { Projects } from "@data/projects";
 import { ServicesData } from "@data/services";
 
 import { createClient } from "@supabase/supabase-js";
 
-// type PropType = {
-//   posts: PostType[];
-// };
+import { PostType } from "@/types/posts"
 
-function index(props) {
+type PropType = {
+  posts: PostType[];
+};
+
+function index(props: PropType) {
   return (
     <>
       <Head>
