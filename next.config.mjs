@@ -6,9 +6,6 @@ const nextConfig = {
   devIndicators: {
     buildActivity: false,
   },
-  images: {
-    domains: ["nafasebra.netlify.app", "https://nafasebra.netlify.app/"],
-  },
 };
 
 export default nextConfig;

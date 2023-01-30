@@ -85,7 +85,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const { data } = await supbaseInit.from('blog')
     .select('blog_title');
 
-  const titles = data.map((item) => item.blog_title);
+  const titles = data!.map((item) => item.blog_title) || ["hello world"];
   const paths = titles.map((title) => ({ params: { title } }));
 
   return {
