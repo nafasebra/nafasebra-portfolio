@@ -110,8 +110,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
     .select('*')
     .neq('blog_title', decodeURIComponent(title))
 
-  console.log(selectedBlog);
-
   return {
     props: {
       selectedBlog: selectedBlog,
