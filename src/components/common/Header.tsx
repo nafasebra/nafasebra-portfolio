@@ -28,8 +28,8 @@ function Header() {
           <div className="w-[90%] h-[650px] relative object-contain mx-auto">
             <Image
               layout="fill"
-              alt="nafasebra homepage"
-              src="/assets/images/homepage.png"
+              alt="nafasebra intro image"
+              src="/assets/images/intro-image.png"
               placeholder="blur"
             />
           </div>
