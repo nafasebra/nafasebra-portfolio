@@ -91,9 +91,11 @@ function Navbar() {
               </li>
             </ul>
             <div className="w-8 h-8">
-              <div className="w-full h-full relative">
-                <Image layout="fill" alt="nafasebra logo" src="/logo.png" />
-              </div>
+              <Link href="/" passHref>
+                <div className="block w-full h-full relative cursor-pointer">
+                  <Image layout="fill" alt="nafasebra logo" src="/logo.png" />
+                </div>
+              </Link>
             </div>
             {/* TODO: i will set light theme later... */}
             {/* <div className="flex items-center">
