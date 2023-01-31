@@ -30,6 +30,7 @@ function Header() {
               layout="fill"
               alt="nafasebra homepage"
               src="/assets/images/homepage.png"
+              placeholder="blur"
             />
           </div>
         </div>
