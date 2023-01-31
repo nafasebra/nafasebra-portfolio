@@ -24,13 +24,13 @@ function Header() {
           </p>
           <SocialSection />
         </div>
-        <div className="w-[90%] h-full lg:w-[48%] mb-5 md:mb-0">
-          <div className="w-[90%] h-[650px] relative object-contain mx-auto">
+        <div className="w-[80%] lg:w-[40%] mb-5 md:mb-0">
+          <div className="w-full h-[650px] relative mx-auto">
             <Image
               layout="fill"
               alt="nafasebra intro image"
-              src="/assets/images/intro-image.png"
-              placeholder="blur"
+              src="/assets/images/intro-image.png" 
+              className="object-contain"
             />
           </div>
         </div>
