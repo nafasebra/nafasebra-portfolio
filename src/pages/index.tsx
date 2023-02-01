@@ -1,5 +1,6 @@
 import Head from "next/head";
 import React from "react";
+import Link from "next/link";
 
 import Container from "@components/layout/Container";
 import DarkSection from "@components/layout/DarkSection";
@@ -125,6 +126,13 @@ function index(props: PropType) {
                     description={item.blog_description}
                   />
                 ))}
+                <div className="flex justify-center">
+                  <Link href='/blog' passHref>
+                    <button className="flex items-center gap-3 px-5 py-3 text-white rounded-lg bg-dark-200 shadow-dark-200 ">
+                      دیدن بقیه پست ها
+                    </button>
+                  </Link>
+                </div>
               </div>
             </div>
           </Container>
@@ -142,9 +150,7 @@ export const getStaticProps = async () => {
     process.env.SUPABASE_KEY || ""
   );
 
-  const { data } = await supbaseInit.from('blog').select('*');
-
-  // console.log(data)
+  const { data } = await supbaseInit.from('blog').select('*').limit(3);
 
   return {
     props: {
