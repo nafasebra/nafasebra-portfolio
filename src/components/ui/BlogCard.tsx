@@ -12,7 +12,7 @@ function BlogCard(props: PropType) {
   const { date, description, title } = props;
 
   return (
-    <div className="bg-dark-200 shadow-dark-100 py-6 px-7 rounded-xl mb-7">
+    <div className="bg-dark-200 shadow-dark-100 py-6 px-7 rounded-xl">
       <Link
         href={`/blog/?title=${encodeURIComponent(title)}`}
         as={`/blog/${encodeURIComponent(title)}`}
