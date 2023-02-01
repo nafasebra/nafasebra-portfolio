@@ -9,10 +9,18 @@ function Navbar() {
   const [scrolled, setScrolled] = useState<boolean>(false);
   const [showMenu, setShowMenu] = useState<boolean>(false);
 
+  const setScroll = () => {
+    if(window.scrollY >= 150) 
+      setScrolled(true) 
+    else setScrolled(false)
+  }
+
   useEffect(() => {
-    document.addEventListener("scroll", () =>
-      window.scrollY >= 150 ? setScrolled(true) : setScrolled(false)
-    );
+    document.addEventListener("scroll", () => setScroll);
+    
+    return () => {
+      document.removeEventListener("scroll", () => setScroll);
+    }
   }, [scrolled]);
 
   const SetOpeningSidebar = useCallback(

@@ -7,9 +7,9 @@ import Navbar from "@components/common/Navbar";
 import Footer from "@components/common/Footer";
 import BlogCard from "@components/ui/BlogCard";
 
-import { createClient } from "@supabase/supabase-js"
+import { createClient } from "@supabase/supabase-js";
 
-import { PostType } from "@/types/posts"
+import { PostType } from "@/types/posts";
 
 type PropType = {
   selectedBlog: PostType[];
@@ -46,7 +46,12 @@ function Blog(props: PropType) {
               <h1 className="text-orange text-4xl font-bold">
                 {selectedBlog[0]?.blog_title}
               </h1>
-              <p className="text-gray-400 py-5 text-sm">{selectedBlog[0]?.created_at}</p>
+              <p className="text-gray-400 py-5 text-sm">
+                {new Date(selectedBlog[0]?.created_at).toLocaleDateString(
+                  "fa-IR",
+                  { year: "numeric", month: "long", day: "numeric" }
+                )}
+              </p>
               <div
                 className="text-gray-300 text-sm py-5 leading-7"
                 dangerouslySetInnerHTML={{
@@ -82,8 +87,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     process.env.SUPABASE_KEY || ""
   );
 
-  const { data } = await supbaseInit.from('blog')
-    .select('blog_title');
+  const { data } = await supbaseInit.from("blog").select("blog_title");
 
   const titles = data!.map((item) => item.blog_title) || ["hello world"];
   const paths = titles.map((title) => ({ params: { title } }));
@@ -99,16 +103,18 @@ export const getStaticProps: GetStaticProps = async (context) => {
     process.env.SUPABASE_URL || "",
     process.env.SUPABASE_KEY || ""
   );
-  
+
   const { title } = context.params as IParams;
 
-  const { data: selectedBlog } = await supbaseInit.from('blog')
-    .select('*')
-    .eq('blog_title', decodeURIComponent(title))
+  const { data: selectedBlog } = await supbaseInit
+    .from("blog")
+    .select("*")
+    .eq("blog_title", decodeURIComponent(title));
 
-  const { data: otherBlogs } = await supbaseInit.from('blog')
-    .select('*')
-    .neq('blog_title', decodeURIComponent(title))
+  const { data: otherBlogs } = await supbaseInit
+    .from("blog")
+    .select("*")
+    .neq("blog_title", decodeURIComponent(title));
 
   return {
     props: {
