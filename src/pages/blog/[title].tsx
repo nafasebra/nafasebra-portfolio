@@ -63,14 +63,16 @@ function Blog(props: PropType) {
               <h3 className="text-light text-lg leading-8 pb-7">
                 بقیه مقاله های منتشر شده...
               </h3>
-              {otherBlogs.map((item) => (
-                <BlogCard
-                  key={item.id}
-                  date={item.created_at}
-                  title={item.blog_title}
-                  description={item.blog_description}
-                />
-              ))}
+              <div className="flex flex-col gap-6">
+                {otherBlogs.map((item) => (
+                  <BlogCard
+                    key={item.id}
+                    date={item.created_at}
+                    title={item.blog_title}
+                    description={item.blog_description}
+                  />
+                ))}
+              </div>
             </aside>
           </div>
         </Container>

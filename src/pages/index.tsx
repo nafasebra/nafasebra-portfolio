@@ -117,7 +117,7 @@ function index(props: PropType) {
                   پست های تازه منتشر شده...
                 </h2>
               </div>
-              <div className="w-full md:w-[70%]">
+              <div className="flex flex-col gap-6 w-full md:w-[70%]">
                 {props.posts.map((item) => (
                   <BlogCard
                     key={item.id}
@@ -126,7 +126,7 @@ function index(props: PropType) {
                     description={item.blog_description}
                   />
                 ))}
-                <div className="flex justify-center">
+                <div className="flex justify-center mt-3">
                   <Link href='/blog' passHref>
                     <button className="flex items-center gap-3 px-5 py-3 text-white rounded-lg bg-dark-200 shadow-dark-200 ">
                       دیدن بقیه پست ها

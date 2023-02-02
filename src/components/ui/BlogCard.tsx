@@ -14,8 +14,7 @@ function BlogCard(props: PropType) {
   return (
     <div className="bg-dark-200 shadow-dark-100 py-6 px-7 rounded-xl">
       <Link
-        href={`/blog/?title=${encodeURIComponent(title)}`}
-        as={`/blog/${encodeURIComponent(title)}`}
+        href={`/blog/${encodeURIComponent(title)}`}
       >
         <h3 className="inline-block text-orange font-bold text-2xl cursor-pointer">
           {title}
