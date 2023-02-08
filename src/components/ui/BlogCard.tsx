@@ -12,25 +12,27 @@ function BlogCard(props: PropType) {
   const { date, description, title } = props;
 
   return (
-    <div className="bg-dark-200 shadow-dark-100 py-6 px-7 rounded-xl">
-      <Link
-        href={`/blog/${encodeURIComponent(title)}`}
-      >
-        <h3 className="inline-block text-orange font-bold text-2xl cursor-pointer">
+    <Link
+      href={`/blog/${encodeURIComponent(title)}`}
+      passHref
+      legacyBehavior
+    >
+      <div className="bg-dark-200 shadow-dark-100 py-6 px-7 rounded-xl cursor-pointer">
+        <h3 className="inline-block text-orange font-bold text-2xl">
           {title}
         </h3>
-      </Link>
-      <p className="py-2 text-gray-400 text-sm">
-        {new Date(date).toLocaleDateString("fa-IR", {
-          year: "numeric",
-          month: "long",
-          day: "numeric",
-        })}
-      </p>
-      <p className="pt-2 text-gray-300 leading-6 text-[0.9rem]">
-        {removeHtmlTag(description.substring(0, 250)) + "..."}
-      </p>
-    </div>
+        <p className="py-2 text-gray-400 text-sm">
+          {new Date(date).toLocaleDateString("fa-IR", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })}
+        </p>
+        <p className="pt-2 text-gray-300 leading-6 text-[0.9rem]">
+          {removeHtmlTag(description.substring(0, 250)) + "..."}
+        </p>
+      </div>
+    </Link>
   );
 }
 
