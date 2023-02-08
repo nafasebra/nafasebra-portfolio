@@ -128,7 +128,7 @@ function index(props: PropType) {
                 ))}
                 <div className="flex justify-center mt-3">
                   <Link href='/blog' passHref>
-                    <button className="flex items-center gap-3 px-5 py-3 text-white rounded-lg bg-dark-200 shadow-dark-200 ">
+                    <button className="flex items-center gap-3 px-5 py-3 text-white rounded-lg bg-dark-200 shadow-md shadow-dark-200/50 hover:bg-orange hover:shadow-orange/50 transition-all">
                       دیدن بقیه پست ها
                     </button>
                   </Link>
