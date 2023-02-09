@@ -81,7 +81,7 @@ function Skills() {
       </div>
       <div className="flex items-center justify-start py-3 px-4 text-light rounded-lg bg-dark-200">
         <div className="w-6 h-6 flex justify-center relative">
-          <Image layout="fill" src="/assets/icons/figma.svg" alt="git icon" />
+          <Image layout="fill" src="/assets/icons/git.svg" alt="git icon" />
         </div>
         <span className="ml-3">Git</span>
       </div>
