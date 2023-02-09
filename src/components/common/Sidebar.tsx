@@ -18,7 +18,7 @@ function Sidebar({ show, setClose }: PropType) {
         show
           ? "opacity-100 z-30 translate-y-0"
           : "opacity-0 -z-20 -translate-y-10"
-      } flex flex-col z-30 fixed inset-0 bg-dark-100`}
+      } flex flex-col z-30 fixed inset-0 bg-dark-100 min-h-screen overflow-y-auto`}
     >
       <div className="flex items-center jsutify-end">
         <button
