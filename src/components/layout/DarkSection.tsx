@@ -8,7 +8,7 @@ type PropType = {
 
 function DarkSection({ children, id }: PropType) {
   return (
-    <section className="bg-dark-200 py-36" id={id}>
+    <section className="bg-dark-200 py-24" id={id}>
       <Container>{children}</Container>
     </section>
   );
