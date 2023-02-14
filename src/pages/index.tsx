@@ -52,7 +52,7 @@ function index(props: PropType) {
               <span className="block ml-2 w-7 h-[3px] bg-orange"></span>
               خدماتی که <span className="text-orange mr-1">ارائه می‌دم</span>
             </p>
-            <h3 className="text-light font-bold text-3xl">
+            <h3 className="text-light font-bold text-3xl leading-[3rem]">
               چه کارهایی انجام میدم؟
             </h3>
           </div>
@@ -77,8 +77,8 @@ function index(props: PropType) {
                 <span className="block ml-2 w-7 h-[3px] bg-orange"></span>
                 مهارت های <span className="text-orange mr-1">من</span>
               </p>
-              <h3 className="text-light font-bold text-3xl">
-                چیا بلدم؟ با چه ابزار هایی کار میکنم؟
+              <h3 className="text-light font-bold text-3xl leading-[3rem]">
+                 با چه ابزار هایی کار میکنم؟
               </h3>
             </div>
 
@@ -92,7 +92,7 @@ function index(props: PropType) {
               <span className="block ml-2 w-7 h-[3px] bg-orange"></span>
               پروژه های <span className="text-orange mr-1"> من </span>
             </p>
-            <h3 className="text-light font-bold text-3xl">
+            <h3 className="text-light font-bold text-3xl leading-[3rem]">
               چه کارهایی انجام دادم؟
             </h3>
           </div>
@@ -112,9 +112,9 @@ function index(props: PropType) {
 
         <section className="py-24" id="blog">
           <Container>
-            <div className="flex flex-col md:flex-row justify-between">
-              <div className="w-full md:w-[28%] mb-5 md:mb-0">
-                <h2 className="font-bold text-orange text-3xl lg:text-5xl lg:leading-[5rem]">
+            <div className="flex flex-col md:flex-row gap-9">
+              <div className="w-full md:w-[30%]">
+                <h2 className="text-center lg:text-right font-bold text-orange text-3xl leading-[3rem] lg:text-5xl lg:leading-[5rem]">
                   پست های تازه منتشر شده...
                 </h2>
               </div>
