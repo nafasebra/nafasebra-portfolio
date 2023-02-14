@@ -6,7 +6,7 @@ import SocialSection from "@components/ui/SocialSection";
 function Header() {
   return (
     <header id="header">
-      <div className="flex flex-col-reverse lg:flex-row items-center justify-between py-10">
+      <div className="flex flex-col-reverse lg:flex-row items-center justify-between pt-3 pb-10">
         <div className="w-[90%] lg:w-[48%]">
           <p className="text-sm text-gray-300">
             سلام به همگی. 👋 <span className="text-orange font-bold">من</span>
@@ -24,7 +24,7 @@ function Header() {
           <SocialSection />
         </div>
         <div className="w-[90%] lg:w-[40%] mb-5 md:mb-0">
-          <div className="w-full h-[650px] relative mx-auto">
+          <div className="w-full h-[400px] lg:h-[650px] relative mx-auto">
             <Image
               layout="fill"
               alt="nafasebra intro image"
