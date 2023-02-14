@@ -100,6 +100,7 @@ function index(props: PropType) {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {Projects.map((item) => (
               <ProjectCard
+                key={item.id}
                 imageUrl={item.imageUrl}
                 name={item.name}
                 target={item.target}
