@@ -70,7 +70,7 @@ function index(props: PropType) {
         </DarkSection>
 
         {/* skills section */}
-        <section className="py-24" id="skills">
+        <section className="py-16" id="skills">
           <Container>
             <div className="pb-16">
               <p className="flex items-center text-light pb-5">
@@ -110,7 +110,7 @@ function index(props: PropType) {
           </div>
         </DarkSection>
 
-        <section className="py-24" id="blog">
+        <section className="py-16" id="blog">
           <Container>
             <div className="flex flex-col md:flex-row gap-9">
               <div className="w-full md:w-[30%]">
