@@ -2,9 +2,9 @@ import React from "react";
 
 function SocialSection() {
   return (
-    <ul className="flex items-center pt-7">
+    <ul className="flex items-center gap-4 pt-7">
       {/* the linkedin link */}
-      <li className="ml-5">
+      <li>
         <a
           href="https://www.linkedin.com/in/nafas-ebrahimi-325653189/"
           className="block text-light p-1 hover:text-orange hover:-translate-y-1 cursor-pointer"
@@ -29,7 +29,7 @@ function SocialSection() {
         </a>
       </li>
       {/* the github link */}
-      <li className="ml-5">
+      <li>
         <a
           href="https://github.com/nafasebra"
           className="block text-light p-1 hover:text-orange hover:-translate-y-1 cursor-pointer"
@@ -50,7 +50,7 @@ function SocialSection() {
         </a>
       </li>
       {/* the youtube link */}
-      {/* <li className='ml-5'>
+      {/* <li>
             <a href="#" className='block text-light p-1 hover:text-orange hover:-translate-y-1 cursor-pointer'>
               <svg xmlns="http://www.w3.org/2000/svg" className='w-8 h-8 transition-none' viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -60,7 +60,7 @@ function SocialSection() {
             </a>
           </li> */}
       {/* the gmail address link */}
-      <li className="">
+      <li>
         <a
           href="https://mail.google.com/mail/?view=cm&fs=1&to=ebranafas@gmail.com&su=SUBJECT&body=BODY"
           className="block text-light p-1 hover:text-orange hover:-translate-y-1 cursor-pointer"
@@ -81,6 +81,18 @@ function SocialSection() {
             <path d="M21 9v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" />
             <line x1="3" y1="19" x2="9" y2="13" />
             <line x1="15" y1="13" x2="21" y2="19" />
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://twitter.com/nafasebra_dev"
+          className="block text-light p-1 hover:text-orange hover:-translate-y-1 cursor-pointer"
+          target="_blank"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 transition-all" viewBox="0 0 24 24" stroke-width="1.5" stroke="#212121" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
           </svg>
         </a>
       </li>
