@@ -57,16 +57,6 @@ function Skills() {
         <div className="w-6 h-6 flex justify-center relative">
           <Image
             layout="fill"
-            src="/assets/icons/react.svg"
-            alt="react js icon"
-          />
-        </div>
-        <span className="ml-3">Redux(toolkit)</span>
-      </div>
-      <div className="flex items-center justify-start py-3 px-4 text-light rounded-lg bg-dark-200">
-        <div className="w-6 h-6 flex justify-center relative">
-          <Image
-            layout="fill"
             src="/assets/icons/ts.svg"
             alt="typescript icon"
           />
