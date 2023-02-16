@@ -42,29 +42,19 @@ function Sidebar({ show, setClose }: PropType) {
         </button>
       </div>
       <ul
-        className={`flex flex-col flex-grow items-center justify-center text-light`}
+        className={`flex flex-col gap-4 flex-grow items-center justify-center text-light`}
       >
-        <li className="my-2">
-          <Link href="#header" passHref>
+        <li>
+          <Link href="#services" passHref>
             <p
               onClick={setClose}
               className="text-gray-200 text-lg py-3 cursor-pointer relative"
             >
-              صفحه اصلی
+              خدمات
             </p>
           </Link>
         </li>
-        <li className="my-2">
-          <Link href="#about" passHref>
-            <p
-              onClick={setClose}
-              className="text-gray-200 text-lg py-3 cursor-pointer relative"
-            >
-              درباره من
-            </p>
-          </Link>
-        </li>
-        <li className="my-2">
+        <li>
           <Link href="#projects" passHref>
             <p
               onClick={setClose}
@@ -74,7 +64,7 @@ function Sidebar({ show, setClose }: PropType) {
             </p>
           </Link>
         </li>
-        <li className="my-2">
+        <li>
           <Link href="#skills" passHref>
             <p
               onClick={setClose}
@@ -84,7 +74,7 @@ function Sidebar({ show, setClose }: PropType) {
             </p>
           </Link>
         </li>
-        <li className="my-2">
+        <li>
           <Link href="#blog" passHref>
             <p
               onClick={setClose}
