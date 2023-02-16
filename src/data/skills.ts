@@ -6,7 +6,7 @@ export type SkillType = {
    title: string;
 };
  
-export const Skills: SkillType[] = [
+export const SkillData: SkillType[] = [
    {
       id: uuidv4(),
       icon: "/assets/icons/html.svg",
