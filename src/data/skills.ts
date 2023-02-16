@@ -19,6 +19,11 @@ export const SkillData: SkillType[] = [
    },
    {
       id: uuidv4(),
+      icon: "/assets/icons/js.svg",
+      title: "JavaScript",
+   },
+   {
+      id: uuidv4(),
       icon: "/assets/icons/css.svg",
       title: "TailwindCSS",
    },
