@@ -50,36 +50,29 @@ function Navbar() {
                 />
               </svg>
             </button>
-            <ul className="hidden md:flex items-center">
-              <li className="mx-2">
-                <Link href="#header" passHref>
-                  <p className='cursor-pointer text-gray-200 font-bold py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[2px] after:bg-orange hover:text-orange hover:after:w-4'>
-                    صفحه اصلی
-                  </p>
-                </Link>
-              </li>
-              <li className="mx-2">
+            <ul className="hidden md:flex items-center gap-4">
+              <li>
                 <Link href="#about" passHref>
                   <p className='cursor-pointer text-gray-200 font-bold py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[2px] after:bg-orange hover:text-orange hover:after:w-4'>
                     درباره من
                   </p>
                 </Link>
               </li>
-              <li className="mx-2">
+              <li>
                 <Link href="#projects" passHref>
                   <p className='cursor-pointer text-gray-200 font-bold py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[2px] after:bg-orange hover:text-orange hover:after:w-4'>
                     نمونه کارها
                   </p>
                 </Link>
               </li>
-              <li className="mx-2">
+              <li>
                 <Link href="#skills" passHref>
                   <p className='cursor-pointer text-gray-200 font-bold py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[2px] after:bg-orange hover:text-orange hover:after:w-4'>
                     مهارت ها
                   </p>
                 </Link>
               </li>
-              <li className="mx-2">
+              <li>
                 <Link href="#blog" passHref>
                   <p className='cursor-pointer text-gray-200 font-bold py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[2px] after:bg-orange hover:text-orange hover:after:w-4'>
                     بلاگ
