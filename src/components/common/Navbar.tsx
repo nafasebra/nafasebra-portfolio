@@ -10,28 +10,17 @@ function Navbar() {
   const [showMenu, setShowMenu] = useState<boolean>(false);
 
   const setScroll = () => {
-    if(window.scrollY >= 150) 
-      setScrolled(true) 
-    else setScrolled(false)
-  }
+    if (window.scrollY >= 150) setScrolled(true);
+    else setScrolled(false);
+  };
 
   useEffect(() => {
-    document.addEventListener("scroll", () => setScroll);
-    
-    return () => {
-      document.removeEventListener("scroll", () => setScroll);
-    }
+    document.addEventListener("scroll", () => setScroll());
+    return () => document.removeEventListener("scroll", () => setScroll());
   }, [scrolled]);
 
-  const SetOpeningSidebar = useCallback(
-    () => setShowMenu(true),
-    [showMenu, setShowMenu]
-  );
-
-  const SetClosingSidebar = useCallback(
-    () => setShowMenu(false),
-    [showMenu, setShowMenu]
-  );
+  const SetOpeningSidebar = () => setShowMenu(true);
+  const SetClosingSidebar = () => setShowMenu(false);
 
   return (
     <>
