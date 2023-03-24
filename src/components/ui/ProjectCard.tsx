@@ -35,7 +35,7 @@ function ProjectCard(props: PropType) {
             <div className="flex flex-wrap items-center gap-2">
               {
                 skills.map((item, index) => (
-                  <div key={index} className="px-4 py-1 rounded-lg text-sm text-orange border border-orange">{item}</div>
+                  <div key={index} className="px-4 py-1 rounded-lg text-sm text-orange border border-orange font-poppins">{item}</div>
                 ))
               }
             </div>
