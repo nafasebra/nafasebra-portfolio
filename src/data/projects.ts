@@ -28,4 +28,11 @@ export const Projects: ProjectType[] = [
     imageUrl: "/assets/images/rodeo-screenshot.png",
     target: "https://rodeoonline.shop",
   },
+  {
+    id: 4567,
+    name: "وبسایت گالری لوتوس",
+    description: "این پروژه توسط شرکت شمیران وب توسعه داده شده است",
+    imageUrl: "/assets/images/lotus-gallery-screenshot.png",
+    target: "https://lotusgallery.co/",
+  },
 ];
