@@ -4,12 +4,13 @@ import Image from "next/image";
 type PropType = {
   name: string;
   description?: string;
+  skills: string[];
   imageUrl: string;
   target: string;
 };
 
 function ProjectCard(props: PropType) {
-  const { name, description, imageUrl, target } = props;
+  const { name, description, imageUrl, skills, target } = props;
 
   return (
     <div className="bg-dark-100 overflow-hidden rounded-lg transition-all">
@@ -23,10 +24,22 @@ function ProjectCard(props: PropType) {
       </div>
       <div className="flex flex-col gap-4 p-6">
         <a href={target} target="_blank" className="text-orange text-lg font-bold">{name}</a>
-        <div className="flex flex-col items-start justify-center overflow-hidden">
-          <p className="text-light text-sm pb-5">
-            {description?.substring(0, 100) || ""}
+        <div className="flex flex-col items-start justify-center overflow-hidden gap-5">
+          <p className="text-light text-sm">
+            {description || ""}
           </p>
+          <div className="flex flex-col gap-2">
+            <p className="text-light text-sm"> 
+              زبان یا تکنولوژی های بکاررفته:
+            </p>
+            <div className="flex flex-wrap items-center gap-2">
+              {
+                skills.map((item, index) => (
+                  <div key={index} className="px-4 py-1 rounded-lg text-sm text-orange border border-orange">{item}</div>
+                ))
+              }
+            </div>
+          </div>
           <a
             href={target}
             className="flex items-center text-light hover:text-orange hover:underline hover:underline-offset-8"

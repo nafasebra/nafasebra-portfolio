@@ -102,6 +102,7 @@ function index(props: PropType) {
               <ProjectCard
                 key={item.id}
                 imageUrl={item.imageUrl}
+                skills={item.skills}
                 name={item.name}
                 target={item.target}
                 description={item.description}

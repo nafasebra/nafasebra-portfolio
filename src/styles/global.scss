@@ -4,12 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  body {
-    @apply bg-dark-100;
-  }
-}
-
 @font-face {
   font-family: "vazir";
   font-weight: 500;
@@ -23,6 +17,10 @@
   src: url("/assets/fonts/Vazir-Bold-FD.ttf") format("truetype"),
     url("/assets/fonts/Vazir-Bold-FD.woff") format("woff"),
     url("/assets/fonts/Vazir-Bold-FD.woff2") format("woff2");
+}
+
+body {
+  @apply bg-dark-100;
 }
 
 *,
