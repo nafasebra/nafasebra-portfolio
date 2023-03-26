@@ -6,18 +6,17 @@ import Container from "@components/layout/Container";
 import DarkSection from "@components/layout/DarkSection";
 import Navbar from "@components/common/Navbar";
 import Header from "@components/common/Header";
-import ServiceCard from "@components/ui/ServiceCard";
-import Skills from "@components/common/Skills";
 import ProjectCard from "@components/ui/ProjectCard";
 import BlogCard from "@components/ui/BlogCard";
 import Footer from "@components/common/Footer";
 
 import { Projects } from "@data/projects";
-import { ServicesData } from "@data/services";
 
 import { createClient } from "@supabase/supabase-js";
 
 import { PostType } from "@/types/posts"
+import ServicesSection from "@components/common/HomeSection/ServicesSection";
+import SkillsSection from "@components/common/HomeSection/SkillsSection";
 
 type PropType = {
   posts: PostType[];
@@ -45,46 +44,11 @@ function index(props: PropType) {
       </Container>
 
       <main>
-        {/* about me section */}
-        <DarkSection id="services">
-          <div className="pb-16">
-            <p className="flex items-center text-light pb-5">
-              <span className="block ml-2 w-7 h-[3px] bg-orange"></span>
-              خدماتی که <span className="text-orange mr-1">ارائه می‌دم</span>
-            </p>
-            <h3 className="text-light font-bold text-3xl leading-[3rem]">
-              چه کارهایی انجام میدم؟
-            </h3>
-          </div>
+        {/* about of my services */}
+        <ServicesSection />
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-            {ServicesData.map((item, index) => (
-              <ServiceCard
-                key={index}
-                title={item.title}
-                description={item.description}
-                id={index + 1}
-              />
-            ))}
-          </div>
-        </DarkSection>
-
-        {/* skills section */}
-        <section className="py-16" id="skills">
-          <Container>
-            <div className="pb-16">
-              <p className="flex items-center text-light pb-5">
-                <span className="block ml-2 w-7 h-[3px] bg-orange"></span>
-                مهارت های <span className="text-orange mr-1">من</span>
-              </p>
-              <h3 className="text-light font-bold text-3xl leading-[3rem]">
-                 با چه ابزار هایی کار میکنم؟
-              </h3>
-            </div>
-
-            <Skills />
-          </Container>
-        </section>
+        {/* my skills */}
+        <SkillsSection />
 
         <DarkSection id="projects">
           <div className="pb-16">
