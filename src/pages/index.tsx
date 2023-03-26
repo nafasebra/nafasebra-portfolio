@@ -112,6 +112,9 @@ function index(props: PropType) {
         </DarkSection>
 
         <section className="py-16" id="blog">
+          <span className="circle"></span>
+          <span className="circle"></span>
+          <span className="circle"></span>
           <Container>
             <div className="flex flex-col md:flex-row gap-9">
               <div className="w-full md:w-[30%]">
