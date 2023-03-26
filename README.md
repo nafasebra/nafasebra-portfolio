@@ -1,9 +1,10 @@
-<center>
-<h1>nafasebra portfolio</h1>
-My resume, portfolio and blog website bassed on NextJS what i work on this yet.
-
-You can to get inspire design and source codes of this porject. so enjoy it ✌💛
-</center>
+<h1 align="center">nafasebra portfolio</h1>
+<p align="center">
+  My resume, portfolio and blog website bassed on NextJS what i work on this yet.
+</p>
+<p align="center">
+  You can to get inspire design and source codes of this porject. so enjoy it ✌💛
+</p>
 
 ---
 
