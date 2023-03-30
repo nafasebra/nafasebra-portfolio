@@ -49,12 +49,12 @@ function index(props: PropType) {
         <ProjectsSection />
 
         <section className="py-16" id="blog">
-          <span className="circle"></span>
-          <span className="circle"></span>
-          <span className="circle"></span>
           <Container>
             <div className="flex flex-col md:flex-row gap-9">
-              <div className="w-full md:w-[30%]">
+              <div className="w-full md:w-[30%] relative">
+                <span className="square"></span>
+                <span className="square"></span>
+                <span className="square"></span>
                 <h2 className="text-center lg:text-right font-bold text-orange text-3xl leading-[3rem] lg:text-5xl lg:leading-[5rem]">
                   پست های تازه منتشر شده...
                 </h2>

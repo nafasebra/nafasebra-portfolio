@@ -20,6 +20,7 @@
     url("/assets/fonts/Vazir-Bold-FD.woff2") format("woff2");
 }
 
+html,
 body {
   @apply bg-dark-100 overflow-x-hidden;
 }
@@ -71,56 +72,38 @@ img {
   -o-user-drag: none;
 }
 
-// background animation
-@keyframes move {
-  100% {
-    transform: translate3d(0, 0, 1px) rotate(360deg);
+#blog {
+  position: relative;
+  & .square {
+    animation: rotation 1s linear forwards infinite;
+    @apply w-10 h-10 hidden md:block absolute bg-transparent border-4 border-orange;
+    &:nth-child(1) {
+      opacity: 0.4;
+      filter: blur(2px);
+      top: 75%;
+      right: 0;
+      animation-delay: 1s;
+      animation-duration: 4s;
+    }
+    &:nth-child(2) {
+      opacity: 0.75;
+      top: 40%;
+      right: 20%;
+      animation-duration: 1s;
+    }
+    &:nth-child(3) {
+      top: 60%;
+      right: 50%;
+      animation-duration: 10s;
+    }
   }
 }
 
-#blog {
-  position: relative;
-}
-
-#blog .circle {
-  z-index: -1;
-  width: 11vmin;
-  height: 11vmin;
-  border-radius: 11vmin;
-  backface-visibility: hidden;
-  position: absolute;
-  animation: move;
-  animation-duration: 20;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-#blog .circle:nth-child(0) {
-  color: #583C87;
-  top: 71%;
-  left: 93%;
-  animation-duration: 298s;
-  animation-delay: -116s;
-  transform-origin: 0vw 11vh;
-  box-shadow: -22vmin 0 3.5304229315837095vmin currentColor;
-}
-
-#blog .circle:nth-child(1) {
-  color: #583C87;
-  top: 70%;
-  left: 36%;
-  animation-duration: 256s;
-  animation-delay: -120s;
-  transform-origin: -5vw 18vh;
-  box-shadow: -22vmin 0 3.463830120388748vmin currentColor;
-}
-
-#blog .circle:nth-child(2) {
-  color: #FFACAC;
-  top: 80%;
-  left: 12%;
-  animation-duration: 231s;
-  animation-delay: -179s;
-  transform-origin: -7vw 16vh;
-  box-shadow: 22vmin 0 2.938931909089674vmin currentColor;
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
