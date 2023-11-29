@@ -60,7 +60,7 @@ function index(props: PropType) {
                 </h2>
               </div>
               <div className="flex flex-col gap-6 w-full md:w-[70%]">
-                {props.posts.map((item) => (
+                {props?.posts?.map((item) => (
                   <BlogCard
                     key={item.id}
                     date={item.created_at}
@@ -91,6 +91,8 @@ export const getStaticProps = async () => {
     process.env.SUPABASE_URL || "",
     process.env.SUPABASE_KEY || ""
   );
+  console.log(process.env.SUPABASE_URL)
+  console.log(process.env.SUPABASE_KEY)
 
   const { data } = await supbaseInit.from('blog').select('*').limit(3);
 

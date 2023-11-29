@@ -52,7 +52,7 @@ function index(props: PropType) {
         <section className="py-36">
           <Container>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-               {props.posts.map((item) => (
+               {props?.posts?.map((item) => (
                   <BlogCard
                     key={item.id}
                     date={item.created_at}
