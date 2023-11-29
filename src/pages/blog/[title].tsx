@@ -10,6 +10,7 @@ import BlogCard from "@components/ui/BlogCard";
 import { createClient } from "@supabase/supabase-js";
 
 import { PostType } from "@/types/posts";
+import LikeButton from "@components/ui/button/LikeButton";
 
 type PropType = {
   selectedBlog: PostType[];
@@ -55,6 +56,10 @@ function Blog(props: PropType) {
                   __html: selectedBlog[0]?.blog_description || "lorem ipsom",
                 }}
               ></div>
+              <div className="flex items-center justify-between">
+                <p className="text-white">پست را پسندیدید؟</p>
+                <LikeButton />
+              </div>
             </article>
             <aside className="w-full lg:w-[30%]">
               <h3 className="text-light text-lg leading-8 pb-7">

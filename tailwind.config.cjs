@@ -15,6 +15,9 @@ module.exports = {
         'orange': "#F5A302",
         'light': "#f0f0f0",
       },
+      animation: {
+        'like': 'pulse 200ms ease-in 1',
+      },
       fontFamily: {
         'poppins': ['poppins', 'sans-serif']
       },

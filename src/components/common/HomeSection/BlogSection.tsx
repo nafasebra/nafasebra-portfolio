@@ -3,12 +3,7 @@ import Link from "next/link";
 import React from "react";
 import Container from "@components/layout/Container";
 import BlogCard from "@components/ui/BlogCard";
-import Button from "@components/ui/Button";
-
-import { ArrowLeftIcon } from "@heroicons/24/outline";
-
-<ArrowLeftIcon class="h-6 w-6 text-gray-500" />
-
+import Button from "@components/ui/button/Button";
 
 interface IProps {
   data: PostType[];
@@ -41,7 +36,9 @@ function BlogSection(props: IProps) {
             <Link href="/blog" passHref>
               <Button> 
                 <p>دیدن بقیه پست ها</p>
-                <ArrowLeftIcon class="h-6 w-6" />
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+                </svg>
               </Button>
             </Link>
           </div>
