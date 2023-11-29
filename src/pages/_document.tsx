@@ -15,6 +15,10 @@ function _document() {
     <Html lang="IR-fa" dir="rtl">
       <Head>
         <link rel="shortcut icon" href="/favicon.png" />
+        {/* <meta property="og:image"  content="http://···" /> */}
+        <meta property='og:title'  content='nafasebrahimi' />
+        <meta property='og:site_name' content='Nafas Ebrahimi website' />
+        <meta property='og:type' content='website' />
       </Head>
       <body>
         <SplashScreen />

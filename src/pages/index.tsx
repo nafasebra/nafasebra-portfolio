@@ -5,13 +5,12 @@ import Link from "next/link";
 import Container from "@components/layout/Container";
 import Navbar from "@components/common/Navbar";
 import Header from "@components/common/Header";
-import BlogCard from "@components/ui/BlogCard";
 import Footer from "@components/common/Footer";
 import ServicesSection from "@components/common/HomeSection/ServicesSection";
 import SkillsSection from "@components/common/HomeSection/SkillsSection";
-import ProjectsSection from "@components/common/HomeSection/ProjectsSection";
 import { createClient } from "@supabase/supabase-js";
 import { PostType } from "@/types/posts"
+import BlogSection from "@components/common/HomeSection/BlogSection";
 
 type PropType = {
   posts: PostType[];
@@ -39,46 +38,9 @@ function index(props: PropType) {
       </Container>
 
       <main>
-        {/* about of my services */}
         <ServicesSection />
-
-        {/* my skills */}
         <SkillsSection />
-
-        {/* my projects */}
-        <ProjectsSection />
-
-        <section className="py-16" id="blog">
-          <Container>
-            <div className="flex flex-col md:flex-row gap-9">
-              <div className="w-full md:w-[30%] relative">
-                <span className="square"></span>
-                <span className="square"></span>
-                <span className="square"></span>
-                <h2 className="text-center lg:text-right font-bold text-orange text-3xl leading-[3rem] lg:text-5xl lg:leading-[5rem]">
-                  پست های تازه منتشر شده...
-                </h2>
-              </div>
-              <div className="flex flex-col gap-6 w-full md:w-[70%]">
-                {props?.posts?.map((item) => (
-                  <BlogCard
-                    key={item.id}
-                    date={item.created_at}
-                    title={item.blog_title}
-                    description={item.blog_description}
-                  />
-                ))}
-                <div className="flex justify-center mt-3">
-                  <Link href='/blog' passHref>
-                    <button className="flex items-center gap-3 px-5 py-3 text-white rounded-lg bg-dark-200 shadow-md shadow-dark-200/50 hover:bg-orange hover:shadow-orange/50 transition-all">
-                      دیدن بقیه پست ها
-                    </button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </Container>
-        </section>
+        <BlogSection data={props?.posts} />
       </main>
 
       <Footer />

@@ -12,7 +12,7 @@ function Skills() {
       {SkillData.map((item) => (
         <div
           key={item.id}
-          className="flex items-center justify-start py-3 px-4 text-light rounded-lg bg-dark-200"
+          className="flex items-center justify-start py-3 px-4 text-light rounded-lg bg-dark-100"
         >
           <div className="w-6 h-6 flex justify-center relative">
             <Image layout="fill" src={item.icon} alt={`${item.title} icon`} />

@@ -36,7 +36,7 @@ function Blog(props: PropType) {
 
       <Navbar />
 
-      <main>
+      <main className="pt-20">
         <Container>
           <div className="flex flex-col lg:flex-row justify-between py-20">
             <article className="w-full lg:w-[65%]">

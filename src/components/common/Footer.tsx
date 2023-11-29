@@ -1,13 +1,13 @@
 import React from "react";
 import Image from "next/image";
 
-import DarkSection from "@components/layout/DarkSection";
 import SocialSection from "@components/ui/SocialSection";
+import Container from "@components/layout/Container";
 
 function Footer() {
   return (
-    <footer>
-      <DarkSection>
+    <footer className="py-16">
+      <Container>
         <div className="flex flex-col items-center">
           <h2 className="text-gray-300 pb-10 font-bold">
             با من درصورت تمایل در ارتباط باش...
@@ -23,7 +23,7 @@ function Footer() {
           </div>
           <SocialSection />
         </div>
-      </DarkSection>
+      </Container>
     </footer>
   );
 }

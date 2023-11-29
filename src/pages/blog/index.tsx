@@ -3,20 +3,11 @@ import React from "react";
 import Link from "next/link";
 
 import Container from "@components/layout/Container";
-import DarkSection from "@components/layout/DarkSection";
 import Navbar from "@components/common/Navbar";
-import Header from "@components/common/Header";
-import ServiceCard from "@components/ui/ServiceCard";
-import Skills from "@components/common/Skills";
-import ProjectCard from "@components/ui/ProjectCard";
 import BlogCard from "@components/ui/BlogCard";
 import Footer from "@components/common/Footer";
 
-import { Projects } from "@data/projects";
-import { ServicesData } from "@data/services";
-
 import { createClient } from "@supabase/supabase-js";
-
 import { PostType } from "@/types/posts"
 
 type PropType = {

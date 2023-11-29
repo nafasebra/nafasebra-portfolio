@@ -17,7 +17,7 @@ function BlogCard(props: PropType) {
       passHref
       legacyBehavior
     >
-      <div className="bg-dark-200 shadow-dark-100 py-6 px-7 rounded-xl cursor-pointer">
+      <div className="bg-dark-100 shadow-dark-100 py-6 px-7 rounded-xl cursor-pointer">
         <h3 className="inline-block text-orange font-bold text-2xl">
           {title}
         </h3>
