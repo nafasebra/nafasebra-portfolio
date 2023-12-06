@@ -12,12 +12,19 @@ function Skills() {
       {SkillData.map((item) => (
         <div
           key={item.id}
-          className="flex items-center justify-start py-3 px-4 text-light rounded-lg bg-dark-100"
+          className="overflow-hidden relative flex items-center py-3 px-4 text-light rounded-lg bg-dark-100"
         >
-          <div className="w-6 h-6 flex justify-center relative">
-            <Image layout="fill" src={item.icon} alt={`${item.title} icon`} />
+          <div className="flex items-center gap-3">
+            <div className="w-6 h-6 flex justify-center relative">
+              <Image layout="fill" src={item.icon} alt={`${item.title} icon`} />
+            </div>
+            <span className="font-bold">{item.title}</span>
           </div>
-          <span className="ml-3">{item.title}</span>
+          <div className="absolute -right-3 top-1/2 -translate-y-1/2 filter grayscale opacity-10">
+            <div className="w-20 h-20 flex justify-center relative">
+              <Image layout="fill" src={item.icon} alt={`${item.title} icon`} />
+            </div>
+          </div>
         </div>
       ))}
     </div>
