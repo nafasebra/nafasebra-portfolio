@@ -1,6 +1,6 @@
 import React from 'react'
 
-import ProjectCard from '@components/ui/ProjectCard'
+import ProjectCard from '@components/ui/card/ProjectCard'
 import { Projects } from '@data/projects'
 import TopSection from '@components/ui/TopSection'
 import Container from '@components/layout/Container'

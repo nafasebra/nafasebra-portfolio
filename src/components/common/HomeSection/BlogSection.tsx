@@ -2,7 +2,7 @@ import { PostType } from "@/types/posts";
 import Link from "next/link";
 import React from "react";
 import Container from "@components/layout/Container";
-import BlogCard from "@components/ui/BlogCard";
+import BlogCard from "@components/ui/card/BlogCard";
 import Button from "@components/ui/button/Button";
 
 interface IProps {

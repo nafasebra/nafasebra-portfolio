@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import Container from "@components/layout/Container";
 import Navbar from "@components/common/Navbar";
-import BlogCard from "@components/ui/BlogCard";
+import BlogCard from "@components/ui/card/BlogCard";
 import Footer from "@components/common/Footer";
 
 import { createClient } from "@supabase/supabase-js";

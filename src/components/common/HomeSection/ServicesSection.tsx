@@ -1,5 +1,5 @@
 import React from "react";
-import ServiceCard from "@components/ui/ServiceCard";
+import ServiceCard from "@components/ui/card/ServiceCard";
 import { ServicesData } from "@data/services";
 import TopSection from "@components/ui/TopSection";
 import Container from "@components/layout/Container";

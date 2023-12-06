@@ -5,7 +5,7 @@ import { ParsedUrlQuery } from "querystring";
 import Container from "@components/layout/Container";
 import Navbar from "@components/common/Navbar";
 import Footer from "@components/common/Footer";
-import BlogCard from "@components/ui/BlogCard";
+import BlogCard from "@components/ui/card/BlogCard";
 
 import { createClient } from "@supabase/supabase-js";
 
