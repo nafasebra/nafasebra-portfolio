@@ -19,6 +19,14 @@ function _document() {
         <meta property='og:title'  content='nafasebrahimi' />
         <meta property='og:site_name' content='Nafas Ebrahimi website' />
         <meta property='og:type' content='website' />
+        <meta
+          name="keywords"
+          content="nafasebra, nafasebrahimi, nafas ebrahimi, Nafas Ebrahimi, Frontend, Front-end, frontend dev, frontend developer, نفس ابراهیمی, برنامه نویس, برنامه نویس فرانت اند, فرانت اند, برنامه نویسی سمت کلاینت"
+        />
+        <meta
+          name="description"
+          content="سلام به همگی. بنده نفس ابراهیمی هستم و درحوزه برنامه نویسی فرانت اند کار میکنم. خوشحال میشم یک سری به سایتم بزنی. :)"
+        />
       </Head>
       <body>
         <SplashScreen />

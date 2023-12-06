@@ -18,14 +18,6 @@ function index(props: PropType) {
     <>
       <Head>
         <title>بلاگ | نفس ابراهیمی</title>
-        <meta
-          name="keywords"
-          content="nafasebra, nafasebrahimi, nafas ebrahimi, Nafas Ebrahimi, Frontend, Front-end, frontend dev, frontend developer, نفس ابراهیمی, برنامه نویس, برنامه نویس فرانت اند, فرانت اند, برنامه نویسی سمت کلاینت"
-        />
-        <meta
-          name="description"
-          content="سلام به همگی. بنده نفس ابراهیمی هستم و درحوزه برنامه نویسی فرانت اند کار میکنم. خوشحال میشم یک سری به سایتم بزنی. :)"
-        />
       </Head>
 
       <Navbar />
