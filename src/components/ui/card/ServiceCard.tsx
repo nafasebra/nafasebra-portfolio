@@ -10,7 +10,7 @@ function ServiceCard(props: PropType) {
   const { id, title, description } = props;
 
   return (
-    <div className="rounded-lg bg-dark-100 shadow-dark-100 p-6 flex flex-col gap-4">
+    <div className="overflow-hidden relative rounded-lg bg-dark-100 shadow-dark-100 p-6 flex flex-col gap-4">
       <div className="flex items-center gap-3">
         <div className="w-7 h-7 flex items-center justify-center text-sm shadow-md shadow-orange/30 rounded-full bg-orange text-white">
           {id}
@@ -20,6 +20,9 @@ function ServiceCard(props: PropType) {
       <p className="text-sm text-gray-300 text-justify leading-[1.7rem]">
         {description}
       </p>
+      <div className="absolute -left-1 -bottom-1 w-8 h-8 scale-[300%] flex items-center justify-center text-sm rounded-full bg-white/5 text-dark-100 font-bold">
+        {id}
+      </div>
     </div>
   );
 }
