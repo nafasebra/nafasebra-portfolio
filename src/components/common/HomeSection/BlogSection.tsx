@@ -1,4 +1,5 @@
 import { PostType } from "@/types/posts";
+import { useRouter } from "next/router";
 import Link from "next/link";
 import React from "react";
 import Container from "@components/layout/Container";
@@ -10,10 +11,11 @@ interface IProps {
 }
 
 function BlogSection(props: IProps) {
+  const router = useRouter()
   const { data } = props;
 
   return (
-    <section className="py-16" id="blog">
+    <section className="py-16" id="posts">
       <Container>
         <div className="flex flex-col md:flex-row gap-9">
           <div className="w-full md:w-[30%] relative">
@@ -33,7 +35,7 @@ function BlogSection(props: IProps) {
                 description={item.blog_description}
               />
             ))}
-            <Link href="/blog" passHref>
+            <Link href="/blog" passHref={true}>
               <Button> 
                 <p>دیدن بقیه پست ها</p>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">

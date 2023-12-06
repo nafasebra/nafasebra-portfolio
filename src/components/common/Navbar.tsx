@@ -65,15 +65,15 @@ function Navbar() {
                   </p>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="#projects" passHref>
                   <p className='cursor-pointer text-gray-200 font-bold py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[2px] after:bg-orange hover:text-orange hover:after:w-4'>
                     نمونه کارها
                   </p>
                 </Link>
-              </li>
+              </li> */}
               <li>
-                <Link href="#blog" passHref>
+                <Link href="#posts" passHref>
                   <p className='cursor-pointer text-gray-200 font-bold py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[2px] after:bg-orange hover:text-orange hover:after:w-4'>
                     بلاگ
                   </p>
