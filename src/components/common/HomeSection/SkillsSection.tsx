@@ -1,16 +1,13 @@
 import React from "react";
-import Container from "@components/layout/Container";
-import Skills from "../Skills";
 import TopSection from "@components/ui/TopSection";
+import Skills from "../Skills";
 
 function SkillsSection() {
   return (
-    <section className="py-16" id="skills">
-      <Container>
-        <TopSection title="مهارت های من" subTitle="به چه ابزار ها/تکنولوژی هایی مسلط هستم؟" />
+    <section className="py-16 container" id="skills">
+      <TopSection title="مهارت های من" subTitle="به چه ابزار ها/تکنولوژی هایی مسلط هستم؟" />
 
-        <Skills />
-      </Container>
+      <Skills />
     </section>
   );
 }

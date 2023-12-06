@@ -1,7 +1,6 @@
 import Head from "next/head";
 import React from "react";
 
-import Container from "@components/layout/Container";
 import Navbar from "@components/common/Navbar";
 import Header from "@components/common/Header";
 import Footer from "@components/common/Footer";
@@ -23,10 +22,7 @@ function index(props: PropType) {
       </Head>
 
       <Navbar />
-
-      <Container>
-        <Header />
-      </Container>
+      <Header />
 
       <main>
         <ServicesSection />

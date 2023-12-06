@@ -1,7 +1,6 @@
 import Head from "next/head";
 import React from "react";
 
-import Container from "@components/layout/Container";
 import Navbar from "@components/common/Navbar";
 import BlogCard from "@components/ui/card/BlogCard";
 import Footer from "@components/common/Footer";
@@ -22,28 +21,24 @@ function index(props: PropType) {
 
       <Navbar />
 
-      <main>
-        <section className="pt-[80px]">
-          <Container>
-            <h1 className="text-3xl font-bold text-white text-center">وبلاگ من</h1>
-            <p className="text-center pt-5 text-gray-300 text-sm leading-[1.7rem]">
-              اینجا درباره برنامه نویسی و سبک زندگی حرف میزنم! امیدوارم خوشتون بیاد :)
-            </p>
-          </Container>
+      <main className="pt-[150px] pb-16 space-y-16 container">
+        <section>
+          <h1 className="text-3xl font-bold text-white text-center">بلاگ</h1>
+          <p className="text-center pt-5 text-gray-300 text-sm leading-[1.7rem]">
+            لیست پیست نوشته شده توسط من :)
+          </p>
         </section>
-        <section className="py-36">
-          <Container>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-               {props?.posts?.map((item) => (
-                  <BlogCard
-                    key={item.id}
-                    date={item.created_at}
-                    title={item.blog_title}
-                    description={item.blog_description}
-                  />
-                ))}
-            </div>
-          </Container>
+        <section>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {props?.posts?.map((item) => (
+                <BlogCard
+                  key={item.id}
+                  date={item.created_at}
+                  title={item.blog_title}
+                  description={item.blog_description}
+                />
+              ))}
+          </div>
         </section>
       </main>
 

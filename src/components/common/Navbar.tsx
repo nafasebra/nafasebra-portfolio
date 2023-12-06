@@ -1,8 +1,6 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-
-import Container from "@components/layout/Container";
 import Sidebar from "@components/common/Sidebar";
 
 function Navbar() {
@@ -29,7 +27,7 @@ function Navbar() {
           scrolled && "shadow-lg"
         }`}
       >
-        <Container>
+        <div className="container">
           <div className="w-full flex items-center justify-between py-5 px-2">
             <button
               onClick={SetOpeningSidebar}
@@ -92,7 +90,7 @@ function Navbar() {
               <ThemeSwitcher />
             </div> */}
           </div>
-        </Container>
+        </div>
       </nav>
       <Sidebar show={showMenu} setClose={SetClosingSidebar} />
     </>

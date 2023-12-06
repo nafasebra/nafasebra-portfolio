@@ -54,6 +54,12 @@
   }
 }
 
+@layer utilities {
+  .container {
+    @apply w-[90%] xl:w-[1100px] px-4 mx-auto;
+  }
+}
+
 :root {
   font-family: "vazir", sans-serif;
   direction: rtl;
