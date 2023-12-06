@@ -39,7 +39,7 @@ function Blog(props: PropType) {
 
       <main className="pt-20">
         <Container>
-          <div className="flex flex-col lg:flex-row justify-between py-20">
+          <div className="flex flex-col lg:flex-row justify-between gap-10 py-12 lg:py-20">
             <article className="w-full lg:w-[65%]">
               <h1 className="text-orange text-4xl font-bold">
                 {selectedBlog[0]?.blog_title}
@@ -61,8 +61,9 @@ function Blog(props: PropType) {
                 <LikeButton />
               </div>
             </article>
-            <aside className="w-full lg:w-[30%]">
-              <h3 className="text-light text-lg leading-8 pb-7">
+            <hr className="block lg:hidden" />
+            <aside className="w-full lg:w-[30%] space-y-7">
+              <h3 className="text-light text-xl font-bold">
                 بقیه مقاله های منتشر شده...
               </h3>
               <div className="flex flex-col gap-6">

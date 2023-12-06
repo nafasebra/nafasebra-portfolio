@@ -18,18 +18,40 @@
   src: url("/assets/fonts/Vazir-Bold-FD.ttf") format("truetype"),
     url("/assets/fonts/Vazir-Bold-FD.woff") format("woff"),
     url("/assets/fonts/Vazir-Bold-FD.woff2") format("woff2");
-}
+  }
 
-html,
-body {
-  @apply bg-dark-200 overflow-x-hidden;
-}
+@layer base {
+  *,
+  *::before,
+  *::after {
+    @apply bg-no-repeat;
+  }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  background-repeat: no-repeat;
+  html,
+  body {
+    @apply bg-dark-200 overflow-x-hidden;
+  }
+
+  body {
+    @apply relative min-h-[100vh] transition-all;
+  }
+
+  hr {
+    @apply border-gray-200/20;
+  }
+
+  button, a, input {
+    @apply transition-all;
+  }
+
+  img {
+    @apply block max-w-full;
+    user-drag: none;
+    -webkit-user-drag: none;
+    -moz-user-drag: none;
+    -ms-user-drag: none;
+    -o-user-drag: none;
+  }
 }
 
 :root {
@@ -42,33 +64,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-}
-
-body {
-  margin: 0;
-  position: relative;
-  min-height: 100vh;
-  transition: all 350ms;
-}
-
-/* Hide default button of input num type in Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-input[type="number"] {
-  -moz-appearance: textfield;
-}
-
-img {
-  user-drag: none;
-  -webkit-user-drag: none;
-  -moz-user-drag: none;
-  -ms-user-drag: none;
-  -o-user-drag: none;
 }
 
 #blog {
