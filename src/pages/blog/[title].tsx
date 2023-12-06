@@ -11,6 +11,7 @@ import { createClient } from "@supabase/supabase-js";
 
 import { PostType } from "@/types/posts";
 import LikeButton from "@components/ui/button/LikeButton";
+import { supabaseInit } from "config/supabase";
 
 type PropType = {
   selectedBlog: PostType[];
@@ -87,12 +88,9 @@ function Blog(props: PropType) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const supbaseInit = createClient(
-    process.env.SUPABASE_URL || "",
-    process.env.SUPABASE_KEY || ""
-  );
+  supabaseInit
 
-  const { data } = await supbaseInit.from("blog").select("blog_title");
+  const { data } = await supabaseInit.from("blog").select("blog_title");
 
   const titles = data!.map((item) => item.blog_title) || ["hello world"];
   const paths = titles.map((title) => ({ params: { title } }));
@@ -104,19 +102,19 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const supbaseInit = createClient(
+  const supabaseInit = createClient(
     process.env.SUPABASE_URL || "",
     process.env.SUPABASE_KEY || ""
   );
 
   const { title } = context.params as IParams;
 
-  const { data: selectedBlog } = await supbaseInit
+  const { data: selectedBlog } = await supabaseInit
     .from("blog")
     .select("*")
     .eq("blog_title", decodeURIComponent(title));
 
-  const { data: otherBlogs } = await supbaseInit
+  const { data: otherBlogs } = await supabaseInit
     .from("blog")
     .select("*")
     .neq("blog_title", decodeURIComponent(title));

@@ -1,14 +1,13 @@
 import Head from "next/head";
 import React from "react";
-import Link from "next/link";
 
 import Container from "@components/layout/Container";
 import Navbar from "@components/common/Navbar";
 import BlogCard from "@components/ui/card/BlogCard";
 import Footer from "@components/common/Footer";
 
-import { createClient } from "@supabase/supabase-js";
 import { PostType } from "@/types/posts"
+import { supabaseInit } from "config/supabase";
 
 type PropType = {
   posts: PostType[];
@@ -62,12 +61,7 @@ function index(props: PropType) {
 }
 
 export const getStaticProps = async () => {
-  const supbaseInit = createClient(
-    process.env.SUPABASE_URL || "",
-    process.env.SUPABASE_KEY || ""
-  );
-
-  const { data } = await supbaseInit.from('blog').select('*');
+  const { data } = await supabaseInit.from('blog').select('*');
 
   return {
     props: {
