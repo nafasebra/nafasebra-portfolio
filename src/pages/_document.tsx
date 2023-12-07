@@ -12,7 +12,7 @@ import SplashScreen from "../components/common/SplashScreen";
 
 function _document() {
   return (
-    <Html lang="IR-fa" dir="rtl">
+    <Html lang="fa" dir="rtl">
       <Head>
         <link rel="shortcut icon" href="/favicon.png" />
         {/* <meta property="og:image"  content="http://···" /> */}
