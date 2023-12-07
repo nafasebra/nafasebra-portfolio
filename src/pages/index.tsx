@@ -9,6 +9,7 @@ import SkillsSection from "@components/common/HomeSection/SkillsSection";
 import { PostType } from "@/types/posts"
 import BlogSection from "@components/common/HomeSection/BlogSection";
 import { supabaseInit } from "config/supabase"
+import ExperianceSection from "@components/common/HomeSection/ExperianceSection";
 
 type PropType = {
   posts: PostType[];
@@ -27,6 +28,7 @@ function index(props: PropType) {
       <main>
         <ServicesSection />
         <SkillsSection />
+        <ExperianceSection />
         <BlogSection data={props?.posts} />
       </main>
 
