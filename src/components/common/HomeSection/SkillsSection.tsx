@@ -4,7 +4,7 @@ import Skills from "../Skills";
 
 function SkillsSection() {
   return (
-    <section className="py-16 container" id="skills">
+    <section className="py-16 container space-y-10" id="skills">
       <TopSection title="مهارت های من" subTitle="به چه ابزار ها/تکنولوژی هایی مسلط هستم؟" />
 
       <Skills />

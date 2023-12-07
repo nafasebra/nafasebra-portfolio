@@ -5,7 +5,7 @@ import { ServicesData } from "@data/services";
 
 function ServicesSection() {
   return (
-    <section className="py-16 container" id="services">
+    <section className="py-16 container space-y-10" id="services">
       <TopSection title="خدمات" subTitle="چه کارهایی از دستم برمیاد؟" />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">

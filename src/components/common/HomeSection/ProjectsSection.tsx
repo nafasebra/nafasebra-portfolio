@@ -6,7 +6,7 @@ import TopSection from '@components/ui/TopSection'
 
 function ProjectsSection() {
   return (
-    <section className='py-16 container' id='project'>
+    <section className='py-16 container space-y-10' id='project'>
       <TopSection title='پروژه های من' subTitle='چه کارهایی انجام دادم؟' />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
