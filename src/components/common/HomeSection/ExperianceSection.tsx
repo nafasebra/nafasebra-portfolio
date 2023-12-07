@@ -5,7 +5,7 @@ import ServiceCard from '@components/ui/card/ServiceCard'
 
 function ExperianceSection() {
   return (
-    <section className='py-10 container space-y-10'>
+    <section className='py-10 container space-y-10' id="experiance">
       <TopSection title='تجربیات من' subTitle='کجاها فعالیت کاری داشتم؟' />
       <section className='grid grid-cols-1 md:grid-cols-2 gap-10'>
         {

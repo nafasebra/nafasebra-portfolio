@@ -1,5 +1,4 @@
 import React from "react";
-import { useRouter } from "next/router";
 import Link from "next/link";
 import BlogCard from "@components/ui/card/BlogCard";
 import Button from "@components/ui/button/Button";
@@ -10,7 +9,6 @@ interface IProps {
 }
 
 function BlogSection(props: IProps) {
-  const router = useRouter()
   const { data } = props;
 
   return (
