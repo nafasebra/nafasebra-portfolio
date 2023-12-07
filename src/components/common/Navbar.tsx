@@ -64,7 +64,7 @@ function Navbar() {
                 </Link>
               </li>
               <li>
-                <Link href="#experiance" passHref>
+                <Link href="#experience" passHref>
                   <a className='transition-all cursor-pointer text-gray-200 font-bold py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[2px] after:bg-orange hover:text-orange hover:after:w-4'>
                     فعالیت ها
                   </a>

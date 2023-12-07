@@ -27,10 +27,10 @@
 ---
 
 ### 🎯 what are my goals for use above techs?
-- I want have experiance to use supabase and vercel.
+- I want have experience to use supabase and vercel.
 - `NextJS`, the best tech for implement, developing full stack websites in my idea.
 - tailwind, the best CSS framework in my idea that combine it with sass -> booomb
-- and i want to have experiance to use those together.
+- and i want to have experience to use those together.
 
 ---
 

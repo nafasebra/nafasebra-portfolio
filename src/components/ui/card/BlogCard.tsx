@@ -21,7 +21,7 @@ function BlogCard(props: PropType) {
         <h3 className="inline-block text-orange font-bold text-2xl">
           {title}
         </h3>
-        <p className="py-2 text-gray-400 text-sm">
+        <p className="c">
           {new Date(date).toLocaleDateString("fa-IR", {
             year: "numeric",
             month: "long",
