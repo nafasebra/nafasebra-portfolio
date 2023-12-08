@@ -47,7 +47,7 @@ function index(props: PropType) {
   );
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const { data } = await supabaseInit.from('blog').select('*');
 
   return {

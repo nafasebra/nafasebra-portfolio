@@ -17,18 +17,18 @@ function BlogCard(props: PropType) {
       passHref
       legacyBehavior
     >
-      <div className="bg-dark-100 shadow-dark-100 py-6 px-7 rounded-xl cursor-pointer">
+      <div className="bg-dark-100 space-y-3 shadow-dark-100 py-6 px-7 rounded-xl cursor-pointer">
         <h3 className="inline-block text-orange font-bold text-2xl">
           {title}
         </h3>
-        <p className="c">
+        <p className="text-sm text-gray-500">
           {new Date(date).toLocaleDateString("fa-IR", {
             year: "numeric",
             month: "long",
             day: "numeric",
           })}
         </p>
-        <p className="pt-2 text-gray-300 leading-6 text-[0.9rem]">
+        <p className="text-gray-300 leading-6 text-[0.9rem]">
           {removeHtmlTag(description.substring(0, 250)) + "..."}
         </p>
       </div>

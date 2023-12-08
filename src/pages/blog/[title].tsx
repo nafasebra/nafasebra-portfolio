@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { GetStaticPaths, GetStaticProps } from "next";
+import { GetServerSideProps, GetServerSidePropsContext, GetStaticPaths, GetStaticProps } from "next";
 import { ParsedUrlQuery } from "querystring";
 
 import Navbar from "@components/common/Navbar";
@@ -84,21 +84,21 @@ function Blog(props: PropType) {
   );
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  supabaseInit
+// export const getStaticPaths: GetStaticPaths = async () => {
+//   supabaseInit
 
-  const { data } = await supabaseInit.from("blog").select("blog_title");
+//   const { data } = await supabaseInit.from("blog").select("blog_title");
 
-  const titles = data!.map((item) => item.blog_title) || ["hello world"];
-  const paths = titles.map((title) => ({ params: { title } }));
+//   const titles = data!.map((item) => item.blog_title) || ["hello world"];
+//   const paths = titles.map((title) => ({ params: { title } }));
 
-  return {
-    paths,
-    fallback: false,
-  };
-};
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// };
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
   const supabaseInit = createClient(
     process.env.SUPABASE_URL || "",
     process.env.SUPABASE_KEY || ""
