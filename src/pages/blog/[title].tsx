@@ -1,16 +1,15 @@
 import Head from "next/head";
-import { GetServerSideProps, GetServerSidePropsContext, GetStaticPaths, GetStaticProps } from "next";
+import { GetServerSideProps, GetServerSidePropsContext } from "next";
 import { ParsedUrlQuery } from "querystring";
+
+import { supabaseInit } from "config/supabase";
 
 import Navbar from "@components/common/Navbar";
 import Footer from "@components/common/Footer";
 import BlogCard from "@components/ui/card/BlogCard";
-
-import { createClient } from "@supabase/supabase-js";
+import LikeButton from "@components/ui/button/LikeButton";
 
 import { PostType } from "@/types/posts";
-import LikeButton from "@components/ui/button/LikeButton";
-import { supabaseInit } from "config/supabase";
 
 type PropType = {
   selectedBlog: PostType[];
@@ -84,26 +83,7 @@ function Blog(props: PropType) {
   );
 }
 
-// export const getStaticPaths: GetStaticPaths = async () => {
-//   supabaseInit
-
-//   const { data } = await supabaseInit.from("blog").select("blog_title");
-
-//   const titles = data!.map((item) => item.blog_title) || ["hello world"];
-//   const paths = titles.map((title) => ({ params: { title } }));
-
-//   return {
-//     paths,
-//     fallback: false,
-//   };
-// };
-
 export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
-  const supabaseInit = createClient(
-    process.env.SUPABASE_URL || "",
-    process.env.SUPABASE_KEY || ""
-  );
-
   const { title } = context.params as IParams;
 
   const { data: selectedBlog } = await supabaseInit
