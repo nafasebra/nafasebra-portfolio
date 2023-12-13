@@ -2,36 +2,11 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Sidebar from "@components/common/Sidebar";
-import { useRouter } from "next/router";
-
-const navLinks = [
-  {
-    id: 1,
-    title: "خدمات",
-    link: "services",
-  },
-  {
-    id: 2,
-    title: "مهارت ها",
-    link: "skills",
-  },
-  {
-    id: 3,
-    title: "فعالیت ها",
-    link: "experience",
-  },
-  {
-    id: 4,
-    title: "بلاگ",
-    link: "posts",
-  },
-];
+import { navLinks } from "@data/links";
 
 function Navbar() {
   const [scrolled, setScrolled] = useState<boolean>(false);
   const [showMenu, setShowMenu] = useState<boolean>(false);
-
-  const router = useRouter();
 
   const setScroll = () => {
     if (window.scrollY >= 150) setScrolled(true);
