@@ -2,14 +2,53 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Sidebar from "@components/common/Sidebar";
+import { useRouter } from "next/router";
+
+const navLinks = [
+  {
+    id: 1,
+    title: "خدمات",
+    link: "services",
+  },
+  {
+    id: 2,
+    title: "مهارت ها",
+    link: "skills",
+  },
+  {
+    id: 3,
+    title: "فعالیت ها",
+    link: "experience",
+  },
+  {
+    id: 4,
+    title: "بلاگ",
+    link: "posts",
+  },
+];
 
 function Navbar() {
   const [scrolled, setScrolled] = useState<boolean>(false);
   const [showMenu, setShowMenu] = useState<boolean>(false);
 
+  const router = useRouter();
+
   const setScroll = () => {
     if (window.scrollY >= 150) setScrolled(true);
     else setScrolled(false);
+  };
+
+  const handleScroll = (id: string) => {
+    const element = document.getElementById(id);
+    if (typeof element === "undefined" || element === null) return;
+    
+    const offsetElement = element.offsetTop || 0;
+    
+    window.scrollTo({
+      left: 0,
+      top: offsetElement - 100,
+      behavior: "smooth",
+    });
   };
 
   useEffect(() => {
@@ -49,34 +88,51 @@ function Navbar() {
               </svg>
             </button>
             <ul className="hidden md:flex items-center gap-4">
-              <li>
-                <Link href="#services" passHref>
-                  <a className='transition-all cursor-pointer text-gray-200 font-bold py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[2px] after:bg-orange hover:text-orange hover:after:w-4'>
-                    خدمات
-                  </a>
+              {navLinks.map((item) => (
+                <li
+                  key={item.id}
+                  className={`transition-all cursor-pointer text-gray-200 font-bold py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[2px] after:bg-orange hover:text-orange hover:after:w-4`}
+                  onClick={() => handleScroll(item.link)}
+                >
+                  {item.title}
+                </li>
+              ))}
+              {/* <li>
+                <Link
+                  href="#services"
+                  passHref
+                  onClick={() => handleScroll("services")}
+                >
+                  <a className='transition-all cursor-pointer text-gray-200 font-bold py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[2px] after:bg-orange hover:text-orange hover:after:w-4'></a>
                 </Link>
               </li>
               <li>
-                <Link href="#skills" passHref>
-                  <a className='transition-all cursor-pointer text-gray-200 font-bold py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[2px] after:bg-orange hover:text-orange hover:after:w-4'>
-                    مهارت ها
-                  </a>
+                <Link
+                  href="#skills"
+                  passHref
+                  onClick={() => handleScroll("skills")}
+                >
+                  <a className='transition-all cursor-pointer text-gray-200 font-bold py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[2px] after:bg-orange hover:text-orange hover:after:w-4'></a>
                 </Link>
               </li>
               <li>
-                <Link href="#experience" passHref>
-                  <a className='transition-all cursor-pointer text-gray-200 font-bold py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[2px] after:bg-orange hover:text-orange hover:after:w-4'>
-                    فعالیت ها
-                  </a>
+                <Link
+                  href="#experience"
+                  passHref
+                  onClick={() => handleScroll("experience")}
+                >
+                  <a className='transition-all cursor-pointer text-gray-200 font-bold py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[2px] after:bg-orange hover:text-orange hover:after:w-4'></a>
                 </Link>
               </li>
               <li>
-                <Link href="#posts" passHref>
-                  <a className='transition-all cursor-pointer text-gray-200 font-bold py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[2px] after:bg-orange hover:text-orange hover:after:w-4'>
-                    بلاگ
-                  </a>
+                <Link
+                  href="#posts"
+                  passHref
+                  onClick={() => handleScroll("posts")}
+                >
+                  <a className='transition-all cursor-pointer text-gray-200 font-bold py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[2px] after:bg-orange hover:text-orange hover:after:w-4'></a>
                 </Link>
-              </li>
+              </li> */}
             </ul>
             <div className="w-8 h-8">
               <Link href="/" passHref>
