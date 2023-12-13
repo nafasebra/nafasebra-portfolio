@@ -1,12 +1,30 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
+import { navLinks } from "@data/links";
 
 type PropType = {
   show: boolean;
   setClose: () => void;
 };
 
-function Sidebar({ show, setClose }: PropType) {
+function Sidebar(props: PropType) {
+  const { show, setClose } = props;
+
+  const handleScroll = (id: string) => {
+    const element = document.getElementById(id);
+    if (typeof element === "undefined" || element === null) return;
+
+    const offsetElement = element.offsetTop || 0;
+
+    window.scrollTo({
+      left: 0,
+      top: offsetElement - 50,
+      behavior: "smooth",
+    });
+
+    setClose();
+  };
+
   useEffect(() => {
     if (show) document.body.style.overflowY = "hidden";
     else document.body.style.overflowY = "visible";
@@ -44,46 +62,15 @@ function Sidebar({ show, setClose }: PropType) {
       <ul
         className={`flex flex-col gap-4 flex-grow items-center justify-center text-light`}
       >
-        <li>
-          <Link href="#services" passHref>
-            <p
-              onClick={setClose}
-              className="text-gray-200 text-lg py-3 cursor-pointer relative"
-            >
-              خدمات
-            </p>
-          </Link>
-        </li>
-        <li>
-          <Link href="#projects" passHref>
-            <p
-              onClick={setClose}
-              className="text-gray-200 text-lg py-3 cursor-pointer relative"
-            >
-              نمونه کارها
-            </p>
-          </Link>
-        </li>
-        <li>
-          <Link href="#skills" passHref>
-            <p
-              onClick={setClose}
-              className="text-gray-200 text-lg py-3 cursor-pointer relative"
-            >
-              مهارت ها
-            </p>
-          </Link>
-        </li>
-        <li>
-          <Link href="#blog" passHref>
-            <p
-              onClick={setClose}
-              className="text-gray-200 text-lg py-3 cursor-pointer relative"
-            >
-              بلاگ
-            </p>
-          </Link>
-        </li>
+        {navLinks.map((item) => (
+          <li
+            key={item.id}
+            onClick={() => handleScroll(item.link)}
+            className="text-gray-200 text-lg py-3 cursor-pointer relative"
+          >
+            {item.title}
+          </li>
+        ))}
       </ul>
     </aside>
   );

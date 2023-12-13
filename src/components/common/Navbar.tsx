@@ -16,7 +16,7 @@ function Navbar() {
   const handleScroll = (id: string) => {
     const element = document.getElementById(id);
     if (typeof element === "undefined" || element === null) return;
-    
+
     const offsetElement = element.offsetTop || 0;
     
     window.scrollTo({
@@ -72,42 +72,6 @@ function Navbar() {
                   {item.title}
                 </li>
               ))}
-              {/* <li>
-                <Link
-                  href="#services"
-                  passHref
-                  onClick={() => handleScroll("services")}
-                >
-                  <a className='transition-all cursor-pointer text-gray-200 font-bold py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[2px] after:bg-orange hover:text-orange hover:after:w-4'></a>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#skills"
-                  passHref
-                  onClick={() => handleScroll("skills")}
-                >
-                  <a className='transition-all cursor-pointer text-gray-200 font-bold py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[2px] after:bg-orange hover:text-orange hover:after:w-4'></a>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#experience"
-                  passHref
-                  onClick={() => handleScroll("experience")}
-                >
-                  <a className='transition-all cursor-pointer text-gray-200 font-bold py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[2px] after:bg-orange hover:text-orange hover:after:w-4'></a>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#posts"
-                  passHref
-                  onClick={() => handleScroll("posts")}
-                >
-                  <a className='transition-all cursor-pointer text-gray-200 font-bold py-3 mx-2 relative after:contents-["*"] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-[2px] after:bg-orange hover:text-orange hover:after:w-4'></a>
-                </Link>
-              </li> */}
             </ul>
             <div className="w-8 h-8">
               <Link href="/" passHref>
