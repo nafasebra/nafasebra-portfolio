@@ -15,12 +15,11 @@ function ExperienceCard(props: ExperienceType) {
         <p className="text-2xl">-</p>
         <p>{dateTo ?? "الان"}</p>
       </div>
-      <ul className="space-y-3">
+      <ul className="space-y-2 list-disc pr-3 text-gray-300">
         {description
           ? description.map((item, index) => (
-              <li key={index} className="flex flex-wrap gap-2">
-                <span className="mt-[5px] block w-2 h-2 bg-gray-300 rounded-full"></span>
-                <p className="text-sm text-gray-300">{item}</p>
+              <li key={index}>
+                <p className="text-sm">{item}</p>
               </li>
             ))
           : null}
