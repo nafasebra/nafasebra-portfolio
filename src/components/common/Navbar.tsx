@@ -3,10 +3,12 @@ import Link from "next/link";
 import Image from "next/image";
 import Sidebar from "@components/common/Sidebar";
 import { navLinks } from "@data/links";
+import { useRouter } from "next/router";
 
 function Navbar() {
   const [scrolled, setScrolled] = useState<boolean>(false);
   const [showMenu, setShowMenu] = useState<boolean>(false);
+  const router = useRouter()
 
   const setScroll = () => {
     if (window.scrollY >= 150) setScrolled(true);
@@ -15,15 +17,34 @@ function Navbar() {
 
   const handleScroll = (id: string) => {
     const element = document.getElementById(id);
-    if (typeof element === "undefined" || element === null) return;
 
-    const offsetElement = element.offsetTop || 0;
-    
-    window.scrollTo({
-      left: 0,
-      top: offsetElement - 100,
-      behavior: "smooth",
-    });
+    if (!element && router.pathname === "/") {
+      console.error(`Element with id ${id} not found`);
+      return;
+    }
+
+    const offsetElement = element?.offsetTop || 0;
+
+    const navigateAndScroll = () => {
+      window.scrollTo({
+        left: 0,
+        top: offsetElement - 100,
+        behavior: "smooth",
+      });
+    };
+
+    // Check if already on the root page
+    if (router.pathname === "/") {
+      navigateAndScroll();
+    } else {
+      // Navigate to the root page and then scroll
+      router.push('/').then(() => {
+        console.log('Navigation complete. Scrolling to', id);
+        setTimeout(() => {
+          navigateAndScroll();
+        }, 100);
+      });
+    }
   };
 
   useEffect(() => {
