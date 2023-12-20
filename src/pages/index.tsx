@@ -23,7 +23,7 @@ function index(props: PropType) {
       </Head>
 
       <Navbar />
-      <Header />
+      {/* <Header /> */}
 
       <main>
         <ServicesSection />

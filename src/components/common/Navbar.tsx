@@ -4,10 +4,12 @@ import Image from "next/image";
 import Sidebar from "@components/common/Sidebar";
 import { navLinks } from "@data/links";
 import { useRouter } from "next/router";
+import { useTransition } from "react";
 
 function Navbar() {
   const [scrolled, setScrolled] = useState<boolean>(false);
   const [showMenu, setShowMenu] = useState<boolean>(false);
+  const [idElement, setIdElement] = useState("");
   const router = useRouter()
 
   const setScroll = () => {
@@ -15,35 +17,32 @@ function Navbar() {
     else setScrolled(false);
   };
 
-  const handleScroll = (id: string) => {
+  const getElementAndScroll = (id: string) => {
     const element = document.getElementById(id);
-
+  
     if (!element && router.pathname === "/") {
       console.error(`Element with id ${id} not found`);
       return;
     }
-
+  
     const offsetElement = element?.offsetTop || 0;
 
-    const navigateAndScroll = () => {
-      window.scrollTo({
-        left: 0,
-        top: offsetElement - 100,
-        behavior: "smooth",
-      });
-    };
+    window.scrollTo({
+      left: 0,
+      top: offsetElement - 100,
+      behavior: "smooth",
+    });
+  }
 
-    // Check if already on the root page
+  const handleScroll = (id: string) => {
     if (router.pathname === "/") {
-      navigateAndScroll();
+      getElementAndScroll(id);
     } else {
-      // Navigate to the root page and then scroll
       router.push('/').then(() => {
-        console.log('Navigation complete. Scrolling to', id);
         setTimeout(() => {
-          navigateAndScroll();
-        }, 100);
-      });
+          getElementAndScroll(id)
+        }, 1000);
+      })
     }
   };
 
