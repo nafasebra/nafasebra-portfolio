@@ -99,6 +99,14 @@
   }
 }
 
+.paragraph--3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+          line-clamp: 3; 
+  -webkit-box-orient: vertical;
+}
+
 @keyframes rotation {
   from {
     transform: rotate(0deg);
