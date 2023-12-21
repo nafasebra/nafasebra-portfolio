@@ -106,6 +106,7 @@ function Navbar() {
         </div>
       </nav>
       <Sidebar show={showMenu} setClose={SetClosingSidebar} />
+      <div className="py-10"></div>
     </>
   );
 }

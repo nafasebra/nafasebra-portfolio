@@ -36,7 +36,7 @@ function Blog(props: PropType) {
 
       <Navbar />
 
-      <main className="pt-20 container">
+      <main className="py-16 container">
         <section className="flex flex-col lg:flex-row justify-between gap-10 py-12 lg:py-20">
           <article className="w-full lg:w-[65%]">
             <h1 className="text-orange text-4xl font-bold">

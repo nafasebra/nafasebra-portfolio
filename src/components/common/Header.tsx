@@ -6,7 +6,7 @@ import SocialSection from "@components/ui/SocialSection";
 function Header() {
   return (
     <header className="container" id="header">
-      <div className="flex flex-col-reverse lg:flex-row items-center justify-between pt-20 pb-10">
+      <div className="flex flex-col-reverse lg:flex-row items-center justify-between pb-16">
         <div className="w-[90%] lg:w-[48%]">
           <p className="text-sm text-gray-300">
             سلام به همگی. 👋 <span className="text-orange font-bold">من</span>

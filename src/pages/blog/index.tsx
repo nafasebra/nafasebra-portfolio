@@ -21,7 +21,7 @@ function index(props: PropType) {
 
       <Navbar />
 
-      <main className="pt-[150px] pb-16 space-y-16 container">
+      <main className="py-16 space-y-16 container">
         <section>
           <h1 className="text-3xl font-bold text-white text-center">بلاگ</h1>
           <p className="text-center pt-5 text-gray-300 text-sm leading-[1.7rem]">
