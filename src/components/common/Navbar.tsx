@@ -4,12 +4,10 @@ import Image from "next/image";
 import Sidebar from "@components/common/Sidebar";
 import { navLinks } from "@data/links";
 import { useRouter } from "next/router";
-import { useTransition } from "react";
 
 function Navbar() {
   const [scrolled, setScrolled] = useState<boolean>(false);
   const [showMenu, setShowMenu] = useState<boolean>(false);
-  const [idElement, setIdElement] = useState("");
   const router = useRouter()
 
   const setScroll = () => {

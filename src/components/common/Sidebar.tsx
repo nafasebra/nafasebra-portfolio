@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import Link from "next/link";
 import { navLinks } from "@data/links";
+import { useRouter } from "next/router";
 
 type PropType = {
   show: boolean;
@@ -9,20 +9,35 @@ type PropType = {
 
 function Sidebar(props: PropType) {
   const { show, setClose } = props;
+  const router = useRouter();
 
-  const handleScroll = (id: string) => {
+  const getElementAndScroll = (id: string) => {
     const element = document.getElementById(id);
-    if (typeof element === "undefined" || element === null) return;
-
-    const offsetElement = element.offsetTop || 0;
+  
+    if (!element && router.pathname === "/") {
+      console.error(`Element with id ${id} not found`);
+      return;
+    }
+  
+    const offsetElement = element?.offsetTop || 0;
 
     window.scrollTo({
       left: 0,
-      top: offsetElement - 50,
+      top: offsetElement - 100,
       behavior: "smooth",
     });
+  }
 
-    setClose();
+  const handleScroll = (id: string) => {
+    if (router.pathname === "/") {
+      getElementAndScroll(id);
+    } else {
+      router.push('/').then(() => {
+        setTimeout(() => {
+          getElementAndScroll(id)
+        }, 1000);
+      })
+    }
   };
 
   useEffect(() => {
