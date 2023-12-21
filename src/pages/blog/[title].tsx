@@ -39,23 +39,33 @@ function Blog(props: PropType) {
 
       <main className="py-16 container">
         <section className="flex flex-col lg:flex-row justify-between gap-10 py-12 lg:py-20">
-          <article className="w-full lg:w-[65%]">
+          <article className="w-full lg:w-[65%] space-y-5">
             <h1 className="text-orange text-4xl font-bold">
               {selectedBlog[0]?.blog_title}
             </h1>
-            <p className="text-gray-400 py-5 text-sm">
+            <p className="text-gray-400 text-sm">
               {new Date(selectedBlog[0]?.created_at).toLocaleDateString(
                 "fa-IR",
                 { year: "numeric", month: "long", day: "numeric" }
               )}
             </p>
             <div
-              className="text-gray-300 text-sm py-5 leading-7"
+              className="text-gray-300 text-sm leading-7"
               dangerouslySetInnerHTML={{
                 __html: selectedBlog[0]?.blog_description || "lorem ipsom",
               }}
             ></div>
-            <div className="flex items-center justify-between">
+            <div className="flex flex-wrap gap-2">
+              {changeStringToArray(selectedBlog[0].category).map((item, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-700 rounded-lg text-gray-300 px-3 py-1 text-[0.75rem]"
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
+            <div className="flex items-center py-5 justify-between">
               <p className="text-white">پست را پسندیدید؟</p>
               <LikeButton />
             </div>
