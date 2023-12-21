@@ -7,3 +7,8 @@ export const isEmptyStringArray = (arr: string[]) => {
   }
   return true;
 };
+
+export const changeStringToArray = (str: string): string[] => {
+  if(str === "") return [];
+  return str.trim().split(',')
+}

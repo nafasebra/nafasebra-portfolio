@@ -7,6 +7,7 @@ import Footer from "@components/common/Footer";
 
 import { PostType } from "@/types/posts"
 import { supabaseInit } from "config/supabase";
+import { changeStringToArray } from "@helper/index";
 
 type PropType = {
   posts: PostType[];
@@ -36,6 +37,7 @@ function index(props: PropType) {
                   date={item.created_at}
                   title={item.blog_title}
                   description={item.blog_description}
+                  category={changeStringToArray(item.category)}
                 />
               ))}
           </div>

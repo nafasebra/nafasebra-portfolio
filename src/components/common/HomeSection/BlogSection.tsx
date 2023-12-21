@@ -3,6 +3,7 @@ import Link from "next/link";
 import BlogCard from "@components/ui/card/BlogCard";
 import Button from "@components/ui/button/Button";
 import { PostType } from "@/types/posts";
+import { changeStringToArray } from "@helper/index";
 
 interface IProps {
   data: PostType[];
@@ -29,6 +30,7 @@ function BlogSection(props: IProps) {
               date={item.created_at}
               title={item.blog_title}
               description={item.blog_description}
+              category={changeStringToArray(item.category)}
             />
           ))}
           <Link href="/blog" passHref={true}>

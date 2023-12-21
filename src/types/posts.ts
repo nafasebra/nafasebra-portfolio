@@ -5,4 +5,5 @@ export interface PostType {
    blog_title: string;
    created_at: string;
    blog_description: string;
+   category: string;
 };

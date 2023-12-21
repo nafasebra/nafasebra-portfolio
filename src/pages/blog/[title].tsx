@@ -10,6 +10,7 @@ import BlogCard from "@components/ui/card/BlogCard";
 import LikeButton from "@components/ui/button/LikeButton";
 
 import { PostType } from "@/types/posts";
+import { changeStringToArray } from "@helper/index";
 
 type PropType = {
   selectedBlog: PostType[];
@@ -71,6 +72,7 @@ function Blog(props: PropType) {
                   date={item.created_at}
                   title={item.blog_title}
                   description={item.blog_description}
+                  category={changeStringToArray(item.category)}
                 />
               ))}
             </div>

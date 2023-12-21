@@ -6,10 +6,11 @@ type PropType = {
   title: string;
   description: string;
   date: string;
+  category: string[];
 };
 
 function BlogCard(props: PropType) {
-  const { date, description, title } = props;
+  const { date, description, title, category } = props;
 
   return (
     <Link
@@ -31,6 +32,15 @@ function BlogCard(props: PropType) {
         <p className="text-gray-300 leading-6 text-[0.9rem]">
           {removeHtmlTag(description.substring(0, 250)) + "..."}
         </p>
+        <div className="flex flex-wrap gap-2">
+          {
+            category.map((item, index) => (
+              <div key={index} className="bg-gray-700 rounded-lg text-gray-300 px-3 py-1 text-[0.75rem]">
+                {item}
+              </div>
+            ))
+          }
+        </div>
       </div>
     </Link>
   );
