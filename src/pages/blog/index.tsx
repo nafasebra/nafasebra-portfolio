@@ -26,7 +26,7 @@ function index(props: PropType) {
         <section>
           <h1 className="text-3xl font-bold text-white text-center">بلاگ</h1>
           <p className="text-center pt-5 text-gray-300 text-sm leading-[1.7rem]">
-            لیست پیست نوشته شده توسط من :)
+            لیست پست نوشته شده توسط من :)
           </p>
         </section>
         <section>
