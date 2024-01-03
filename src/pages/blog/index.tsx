@@ -25,8 +25,8 @@ function index(props: PropType) {
       <main className="py-16 space-y-16 container">
         <section>
           <h1 className="text-3xl font-bold text-white text-center">بلاگ</h1>
-          <p className="text-center pt-5 text-gray-300 text-sm leading-[1.7rem]">
-            لیست پست نوشته شده توسط من :)
+          <p className="w-full max-w-[656px] mx-auto text-center pt-5 text-gray-300 text-sm leading-[1.7rem]">
+            به بلاگ من خوش اومدی. توی این صفحه لیستی از پست های من مشاهده میکنی و این لیست چند روزی یکبار آپدیت میشه. امیدوارم پست ها برای شما مفید واقع شده باشن :)
           </p>
         </section>
         <section>

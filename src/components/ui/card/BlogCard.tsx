@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { removeHtmlTag } from "@helper/index";
 
 type PropType = {
   title: string;
@@ -23,7 +24,7 @@ function BlogCard(props: PropType) {
           })}
         </p>
         <p className="text-gray-300 leading-6 text-[0.9rem] paragraph--3">
-          {description}
+          {removeHtmlTag(description)}
         </p>
         <div className="flex flex-wrap gap-2">
           {category.map((item, index) => (
