@@ -20,10 +20,11 @@ function index(props: PropType) {
   const handleSearch = (valueSearch: string) => {
     if (valueSearch === "" || valueSearch.length < 3) {
       setData(props.posts);
-    }
-    else {
+    } else {
       setData((data) => {
-        return [...data.filter((item) => item.blog_title.includes(valueSearch))];
+        return [
+          ...data.filter((item) => item.blog_title.includes(valueSearch)),
+        ];
       });
     }
   };
@@ -49,9 +50,9 @@ function index(props: PropType) {
           <SearchInput handleSearch={handleSearch} />
         </section>
         <section>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {data.length > 0 &&
-              data.map((item) => (
+          {data.length > 0 ? (
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {data.map((item) => (
                 <BlogCard
                   key={item.id}
                   date={item.created_at}
@@ -60,7 +61,12 @@ function index(props: PropType) {
                   category={changeStringToArray(item.category)}
                 />
               ))}
-          </div>
+            </div>
+          ) : (
+            <p className="text-white py-6 text-center">
+              اینجا پستی وجود نداره یا همونی که میخوای سرچ کنی نیست :(
+            </p>
+          )}
         </section>
       </main>
 
