@@ -20,7 +20,7 @@ function BlogSection(props: IProps) {
           <span className="square"></span>
           <span className="square"></span>
           <h2 className="text-center lg:text-right font-bold text-orange text-3xl leading-[3rem] lg:text-5xl lg:leading-[5rem]">
-            پست های تازه منتشر شده...
+            پست هایی که اخیرا منتشر شدن{"<>"}
           </h2>
         </div>
         <div className="flex flex-col gap-6 w-full md:w-[70%]">

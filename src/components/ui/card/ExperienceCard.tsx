@@ -2,11 +2,15 @@ import React from "react";
 import Link from "next/link";
 import { ExperienceType } from "@data/experiences";
 
-function ExperienceCard(props: ExperienceType) {
-  const { title, dateFrom, description, link, dateTo } = props;
+interface ExperienceCardProps extends ExperienceType {
+  wide?: boolean
+}
+
+function ExperienceCard(props: ExperienceCardProps) {
+  const { title, dateFrom, description, link, dateTo, wide } = props;
 
   return (
-    <div className="overflow-hidden relative rounded-lg bg-dark-100 shadow-dark-100 p-6 flex flex-col gap-4">
+    <div className={`${wide ? "col-span-1 md:col-span-2" : ""} overflow-hidden relative rounded-lg bg-dark-100 shadow-dark-100 p-6 flex flex-col gap-4`}>
       <h3 className="inline-block text-orange font-bold text-2xl">
         <Link href={link}>{title}</Link>
       </h3>

@@ -7,7 +7,7 @@ function Footer() {
     <footer className="py-16 container">
       <div className="flex flex-col items-center">
         <h2 className="text-gray-300 pb-10 font-bold">
-          با من درصورت تمایل در ارتباط باش...
+          درصورت همکاری و هرگونه ارتباط با من:
         </h2>
         <div className="w-16 h-[100px] mx-auto">
           <div className="w-full h-full relative">
