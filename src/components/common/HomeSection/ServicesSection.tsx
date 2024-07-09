@@ -11,6 +11,7 @@ function ServicesSection() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
         {ServicesData.map((item, index) => (
           <ServiceCard
+            wide={index === ServicesData.length - 1}
             key={index}
             title={item.title}
             description={item.description}
