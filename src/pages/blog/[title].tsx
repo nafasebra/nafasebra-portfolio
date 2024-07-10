@@ -11,6 +11,7 @@ import LikeButton from "@components/ui/button/LikeButton";
 
 import { PostType } from "@/types/posts";
 import { changeStringToArray } from "@helper/index";
+import Markdown from "react-markdown";
 
 type PropType = {
   selectedBlog: PostType[];
@@ -23,6 +24,8 @@ interface IParams extends ParsedUrlQuery {
 
 function Blog(props: PropType) {
   const { otherBlogs, selectedBlog } = props;
+
+  console.log(selectedBlog[0].category)
 
   return (
     <>
@@ -49,24 +52,24 @@ function Blog(props: PropType) {
                 { year: "numeric", month: "long", day: "numeric" }
               )}
             </p>
-            <div
-              className="text-gray-300 text-sm leading-7"
-              dangerouslySetInnerHTML={{
-                __html: selectedBlog[0]?.blog_description || "lorem ipsom",
-              }}
-            ></div>
+            <div className="text-gray-300 text-sm leading-7">
+              <Markdown>
+                {selectedBlog[0]?.blog_description || "lorem ipsom"}
+              </Markdown>
+            </div>
             <div className="flex flex-wrap gap-2">
-              {changeStringToArray(selectedBlog[0].category).map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-gray-700 rounded-lg text-gray-300 px-3 py-1 text-[0.75rem]"
-                >
-                  {item}
-                </div>
-              ))}
+              {changeStringToArray(selectedBlog[0].category).map(
+                (item, index) => (
+                  <div
+                    key={index}
+                    className="bg-gray-700 rounded-lg text-gray-300 px-3 py-1 text-[0.75rem]"
+                  >
+                    {item}
+                  </div>
+                )
+              )}
             </div>
             <div className="flex items-center py-5 justify-between">
-              <p className="text-white">پست را پسندیدید؟</p>
               <LikeButton />
             </div>
           </article>
@@ -95,7 +98,9 @@ function Blog(props: PropType) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
+export const getServerSideProps: GetServerSideProps = async (
+  context: GetServerSidePropsContext
+) => {
   const { title } = context.params as IParams;
 
   const { data: selectedBlog } = await supabaseInit
